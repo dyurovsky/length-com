@@ -11,19 +11,22 @@
   <body></body>
   <script>
 
+
+
+
     /* create timeline */
     var timeline = [];
-    var complex_utt = "\"Toma zem zorp!\""
-    var simple_utt = "\"Toma!\""
 
-    boxes = ['simple_box', 'complex_box']
-    utts = [complex_utt, simple_utt]
+    // utts
+    var complex_utt = "<i>\"Toma zem zorp bidaku midu osh gipu!\"</i>"
+    var simple_utt = "<i>\"Toma!\"</i>"
+    var utts = [complex_utt, simple_utt]
     const random_utt = utts[Math.floor(Math.random() * utts.length)];
 
-    // var full_design = jsPsych.randomization.factorial(factors, 1);
-    // console.log(full_design)
-    // console.log(full_design[1].box)
-
+    // boxes
+    boxes = ['num_objects/box_1', 'num_objects/box_2']
+    mixed_boxes =  ['num_types/box_1', 'num_types/box_2']
+    entropy_boxes =  ['entropy/box_1', 'entropy/box_2']
 
     /* define welcome message trial */
     // var welcome_block = {
@@ -53,24 +56,39 @@
 
     /* test trials */
 
-    var test_stimuli = [
-      { stimulus: "img/blue.png", data: { test_part: 'test', correct_response: 'f' } },
-      { stimulus: "img/orange.png", data: { test_part: 'test', correct_response: 'j' } }
-    ];
+    // var test_stimuli = [
+    //   { stimulus: "img/blue.png", data: { test_part: 'test', correct_response: 'f' } },
+    //   { stimulus: "img/orange.png", data: { test_part: 'test', correct_response: 'j' } }
+    // ];
 
-    var fixation = {
-      type: 'html-keyboard-response',
-      stimulus: '<div style="font-size:60px;">+</div>',
-      choices: jsPsych.NO_KEYS,
-      trial_duration: function(){
-        return jsPsych.randomization.sampleWithoutReplacement([250, 500, 750, 1000, 1250, 1500, 1750, 2000], 1)[0];
-      },
-      data: {test_part: 'fixation'}
+    // var fixation = {
+    //   type: 'html-keyboard-response',
+    //   stimulus: '<div style="font-size:60px;">+</div>',
+    //   choices: jsPsych.NO_KEYS,
+    //   trial_duration: function(){
+    //     return jsPsych.randomization.sampleWithoutReplacement([250, 500, 750, 1000, 1250, 1500, 1750, 2000], 1)[0];
+    //   },
+    //   data: {test_part: 'fixation'}
+    // }
+
+    var hi_alien = {
+      type: 'html-button-response',
+      stimulus: "<p>This is Dax the alien. He speaks an alien language. <br>" +
+          'He says, <i> "Difu Dax midaku."</i><br>' +
+          'That means "Hello, my name is Dax."</p>' +
+
+          "<div style='width: 700px;'>"+
+          "<div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div>" +
+          "</div>",
+      choices: ['Continue'],
+      data: {test_part: 'setup'}
     }
 
-    var show_alien = {
+
+    var show_box = {
       type: 'html-button-response',
-      stimulus: "<p>Dax the alien opened this box and looked inside! <br> Then, Dax said " + random_utt + "</p>" +
+      stimulus: "<p>Dax has a box. <br> He opened the box and looked inside! <br>" +
+          " Then, Dax says, " + random_utt + "</p>" +
           "<div style='width: 700px;'>"+
           "<div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div>" +
           "<div style='float: center;'><img src='img/grey_box.png'></img></div>"+
@@ -81,14 +99,11 @@
 
     var test_box = {
       type: 'html-button-response',
-      // stimulus: "<p>Which box do you think Dax was looking in when he said " +
-      stimulus: "<p>What do you think the inside of the box looked like when he said " + random_utt + "</p>" +
+      stimulus: "<p>Which box do you think Dax was looking in when he said " + random_utt + "?</p>" +
           "<div style='width: 700px;'>"+
-          // "<div style='float: left;'><img src='img/red_box.png'></img></div>" +
-          // "<div style='float: right;'><img src='img/blue_box.png'></img></div>"+
           "</div>",
-      choices: boxes,
-      button_html: '<button style="border:none;"><img src="img/%choice%.png"></img></button>',
+      choices: mixed_boxes,
+      button_html: '<button style="border:none;"> <img width="250px" src = "img/%choice%.png"> </img> </button>',
       data: {test_part: 'test'}
     }
     //
@@ -103,7 +118,7 @@
     // }
 
     var test_procedure = {
-      timeline: [show_alien, test_box],
+      timeline: [hi_alien, show_box, test_box],
       // timeline_variables: test_stimuli,
       // repetitions: 5,
       // randomize_order: true
