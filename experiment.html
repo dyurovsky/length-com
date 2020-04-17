@@ -13,6 +13,17 @@
 
     /* create timeline */
     var timeline = [];
+    var complex_utt = "\"Toma zem zorp!\""
+    var simple_utt = "\"Toma!\""
+
+    boxes = ['simple_box', 'complex_box']
+    utts = [complex_utt, simple_utt]
+    const random_utt = utts[Math.floor(Math.random() * utts.length)];
+
+    // var full_design = jsPsych.randomization.factorial(factors, 1);
+    // console.log(full_design)
+    // console.log(full_design[1].box)
+
 
     /* define welcome message trial */
     // var welcome_block = {
@@ -59,8 +70,7 @@
 
     var show_alien = {
       type: 'html-button-response',
-      stimulus: "<p>Dax the alien looked in the box and said " +
-                "\"Toma zem zorp\"</p>" +
+      stimulus: "<p>Dax the alien opened this box and looked inside! <br> Then, Dax said " + random_utt + "</p>" +
           "<div style='width: 700px;'>"+
           "<div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div>" +
           "<div style='float: center;'><img src='img/grey_box.png'></img></div>"+
@@ -71,13 +81,13 @@
 
     var test_box = {
       type: 'html-button-response',
-      stimulus: "<p>Which box do you think Dax was looking in when he said" +
-                "\"Toma zem zorp\"?</p>" +
+      // stimulus: "<p>Which box do you think Dax was looking in when he said " +
+      stimulus: "<p>What do you think the inside of the box looked like when he said " + random_utt + "</p>" +
           "<div style='width: 700px;'>"+
           // "<div style='float: left;'><img src='img/red_box.png'></img></div>" +
           // "<div style='float: right;'><img src='img/blue_box.png'></img></div>"+
           "</div>",
-      choices: ['red_box', 'blue_box'],
+      choices: boxes,
       button_html: '<button style="border:none;"><img src="img/%choice%.png"></img></button>',
       data: {test_part: 'test'}
     }
