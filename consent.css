@@ -1,0 +1,13 @@
+.block-text-wide {
+  width: 1000px;
+  text-align: left;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.block-text {
+  width: 500px;
+  text-align: justify;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
