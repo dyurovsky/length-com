@@ -140,7 +140,7 @@ window.jsPsych = (function() {
     opts.display_element.innerHTML = '<div class="jspsych-content-wrapper"><div id="jspsych-content"></div></div>';
     DOM_container = opts.display_element;
     DOM_target = document.querySelector('#jspsych-content');
-    
+
 
     // add tabIndex attribute to scope event listeners
     opts.display_element.tabIndex = 0;
@@ -577,7 +577,7 @@ window.jsPsych = (function() {
         // if progress.current_location is -1, then the timeline variable is being evaluated
         // in a function that runs prior to the trial starting, so we should treat that trial
         // as being the active trial for purposes of finding the value of the timeline variable
-        var loc = Math.max(0, progress.current_location); 
+        var loc = Math.max(0, progress.current_location);
         return timeline_parameters.timeline[loc].timelineVariable(variable_name);
       }
     }
@@ -935,7 +935,7 @@ window.jsPsych = (function() {
             }
           }
         }
-      }      
+      }
       // if it's not nested, checking is much easier and do that here:
       else if(typeof trial[param] == 'undefined' || trial[param] === null){
         if(typeof jsPsych.plugins[trial.type].info.parameters[param].default == 'undefined'){
@@ -1001,7 +1001,7 @@ window.jsPsych = (function() {
     document.querySelector('.jspsych-display-element').insertAdjacentHTML('afterbegin',
       '<div id="jspsych-progressbar-container">'+
       '<span>'+
-      msg+ 
+      msg+
       '</span>'+
       '<div id="jspsych-progressbar-outer">'+
         '<div id="jspsych-progressbar-inner"></div>'+
@@ -1839,7 +1839,7 @@ jsPsych.randomization = (function() {
     if(!Array.isArray(arr)){
       console.error("First argument to jsPsych.randomization.sampleWithoutReplacement() must be an array")
     }
-    
+
     if (size > arr.length) {
       console.error("Cannot take a sample " +
         "larger than the size of the set of items to sample.");
@@ -2540,7 +2540,7 @@ jsPsych.pluginAPI = (function() {
     images = images.filter(function(x) { return x != false && x != null})
     audio = audio.filter(function(x) { return x != false && x != null})
     video = video.filter(function(x) { return x != false && x != null})
-    
+
     var total_n = images.length + audio.length + video.length;
 
     var loaded = 0;
