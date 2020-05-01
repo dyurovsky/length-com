@@ -20,33 +20,38 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load data}
 
-dirs <- c(list.dirs(here("raw_data"), full.names = T))
+files <- list.files(here("raw_data"), pattern = "*.json", full.names = T)
 
-files <- map(dirs, ~list.files(.x, pattern = ".json", full.names = T)) %>%
-  unlist()
+df <- lapply(files, fromJSON)
+res <- lapply(df, summary)
 
 
-read_file <- function(file, newnames) {
-  
-  json_out <- fromJSON(file)
-  id <- json_out$WorkerId
-  
-  raw_data <- json_out$answers$data 
-  firstrow <- strsplit(raw_data[1], split = ",")[[1]] %>%
-    str_trim()
-  
-  data <- raw_data[] %>%
-    as_tibble() %>%
-    separate(value, into = firstrow, sep = ",") %>%
-    mutate(subid = id)
+for(i in 1:length(df)){
+  tmp_trials <- df[[i]]$answers$data
+  data <- read.csv(textConnection(tmp_trials))
 }
 
-raw_data <- map(files, read_file) %>%
-  bind_rows() %>%
-  filter(counter != " counter") %>%
-  mutate(subid = salt(subid, .seed = 400)) %>%
-  mutate(subid = as.numeric(as.factor(subid)))
+#read_file <- function(file, newnames) {
+#  
+#  json_out <- fromJSON(file)
+#  id <- json_out$WorkerId
+#  
+#  raw_data <- json_out$answers$data 
+#  firstrow <- strsplit(raw_data[1], split = ",")[[1]] %>%
+#    str_trim()
+  
+#  data <- raw_data[] %>%
+#    as_tibble() %>%
+#    separate(value, into = firstrow, sep = ",") %>%
+#    mutate(subid = id)
+#}
 
-write_csv(raw_data, here("data/turk_data.csv"))
+#raw_data <- map(files, read_file) %>%
+#  bind_rows() %>%
+#  filter(counter != " counter") %>%
+#  mutate(subid = salt(subid, .seed = 400)) %>%
+#  mutate(subid = as.numeric(as.factor(subid)))
+
+#write_csv(raw_data, here("data/turk_data.csv"))
 
 ```
