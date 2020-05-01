@@ -1,0 +1,13 @@
+{
+ "AssignmentId": "3TMSXRD2X7P53BLVR3VVL5YZ5W41W6",
+ "WorkerId": "0a4d8efb71880da6d0e80a6660964977",
+ "HITId": "3X55NP42EO587L4FCJQHTKA9LMH3P0",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2020-05-01T19:42:23.000Z",
+ "AcceptTime": "2020-05-01T19:35:55.000Z",
+ "SubmitTime": "2020-05-01T19:37:23.000Z",
+ "ApprovalTime": "2020-05-01T19:42:55.000Z",
+ "answers": {
+  "data": "\"rt\",\"url\",\"trial_type\",\"trial_index\",\"time_elapsed\",\"internal_node_id\",\"stimulus\",\"key_press\",\"button_pressed\",\"test_part\",\"utt_type\",\"boxes\"\r\n\"17159.139999999752\",\"consent/consent.html\",\"external-html\",\"0\",\"17232\",\"0.0-0.0\",\"\",\"\",\"\",\"\",\"\",\"\"\r\n\"3679.854999998497\",\"\",\"html-keyboard-response\",\"1\",\"20913\",\"0.0-1.0\",\"Welcome to the experiment. Press any key to begin.\",\"13\",\"\",\"\",\"\",\"\"\r\n\"1875.7949999999255\",\"\",\"html-keyboard-response\",\"2\",\"22789\",\"0.0-2.0\",\"<p>In this experiment, you will see some aliens talk and make judgments about what they are talking about.<p>Press any key to begin.</p>\",\"13\",\"\",\"\",\"\",\"\"\r\n\"5205.874999999651\",\"\",\"html-button-response\",\"3\",\"29997\",\"0.0-3.0-0.0\",\"<p>This is Dax the alien. He speaks an alien language.<br><br>He says, <i> \"\"Difu Dax midaku.\"\"</i><br>That means \"\"Hello, my name is Dax.\"\"</p><br><div style='width: 700px;'><div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div></div><br>\",\"\",\"0\",\"setup\",\"\",\"\"\r\n\"4692.564999999377\",\"\",\"html-button-response\",\"4\",\"34690\",\"0.0-3.0-1.0\",\"<p>Dax has a box. <br> He opened the box and looked inside <br><br>Then, Dax says, <i>\"\"Toma zem zorp bidaku midu osh gipu!\"\"</i></p><div style='width: 700px;'><div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div><div style='float: center;'><img src='img/grey_box.png'></img></div></div><br>\",\"\",\"0\",\"setup\",\"\",\"\"\r\n\"6809.274999999616\",\"\",\"html-button-response\",\"5\",\"41500\",\"0.0-3.0-2.0\",\"<p>Which box do you think Dax was looking in when he said<br><i>\"\"Toma zem zorp bidaku midu osh gipu!\"\"</i>?</p><div style='width: 700px;'></div>\",\"\",\"1\",\"test\",\"complex\",\"num_types/box_1,num_types/box_2\"\r\n"
+ }
+}

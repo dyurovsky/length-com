@@ -1,0 +1,13 @@
+{
+ "AssignmentId": "3FQ5JJ512MDHMIY37CAQU1H7LQZNK3",
+ "WorkerId": "adfbd0fd81c0cbee4f1ed2e2f5ee1c9c",
+ "HITId": "3X55NP42EO587L4FCJQHTKA9LMH3P0",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2020-05-01T19:35:29.000Z",
+ "AcceptTime": "2020-05-01T19:27:49.000Z",
+ "SubmitTime": "2020-05-01T19:30:29.000Z",
+ "ApprovalTime": "2020-05-01T19:35:55.000Z",
+ "answers": {
+  "data": "\"rt\",\"url\",\"trial_type\",\"trial_index\",\"time_elapsed\",\"internal_node_id\",\"stimulus\",\"key_press\",\"button_pressed\",\"test_part\",\"utt_type\",\"boxes\"\r\n\"25184.59000007715\",\"consent/consent.html\",\"external-html\",\"0\",\"25383\",\"0.0-0.0\",\"\",\"\",\"\",\"\",\"\",\"\"\r\n\"6205.554999993183\",\"\",\"html-keyboard-response\",\"1\",\"31591\",\"0.0-1.0\",\"Welcome to the experiment. Press any key to begin.\",\"32\",\"\",\"\",\"\",\"\"\r\n\"2627.5400000158697\",\"\",\"html-keyboard-response\",\"2\",\"34220\",\"0.0-2.0\",\"<p>In this experiment, you will see some aliens talk and make judgments about what they are talking about.<p>Press any key to begin.</p>\",\"32\",\"\",\"\",\"\",\"\"\r\n\"7279.805000056513\",\"\",\"html-button-response\",\"3\",\"43503\",\"0.0-3.0-0.0\",\"<p>This is Dax the alien. He speaks an alien language.<br><br>He says, <i> \"\"Difu Dax midaku.\"\"</i><br>That means \"\"Hello, my name is Dax.\"\"</p><br><div style='width: 700px;'><div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div></div><br>\",\"\",\"0\",\"setup\",\"\",\"\"\r\n\"11252.705000108108\",\"\",\"html-button-response\",\"4\",\"54758\",\"0.0-3.0-1.0\",\"<p>Dax has a box. <br> He opened the box and looked inside <br><br>Then, Dax says, <i>\"\"Toma!\"\"</i></p><div style='width: 700px;'><div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div><div style='float: center;'><img src='img/grey_box.png'></img></div></div><br>\",\"\",\"0\",\"setup\",\"\",\"\"\r\n\"19059.82500000391\",\"\",\"html-button-response\",\"5\",\"73820\",\"0.0-3.0-2.0\",\"<p>Which box do you think Dax was looking in when he said<br><i>\"\"Toma!\"\"</i>?</p><div style='width: 700px;'></div>\",\"\",\"0\",\"test\",\"simple\",\"entropy/box_1,entropy/box_2\"\r\n"
+ }
+}
