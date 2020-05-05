@@ -4,8 +4,6 @@
     <title>Alien language game</title>
     <script src="jspsych-6.1.0/jspsych.js"></script>
     <script src="mmturkey-0.6.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-html-button-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
     <script src="consent/consent.js"></script>
@@ -26,18 +24,54 @@
     //const random_utt = utts[Math.floor(Math.random() * utts.length)];
 
     // boxes
-    var boxes = ['num_objects/box_1', 'num_objects/box_2']
-    var mixed_boxes =  ['num_types/box_1', 'num_types/box_2']
+    var num_boxes = ['num_objects/box_1', 'num_objects/box_2']
+    var type_boxes =  ['num_types/box_1', 'num_types/box_2']
     var entropy_boxes =  ['entropy/box_1', 'entropy/box_2']
 
-    var all_boxes = [boxes, mixed_boxes, entropy_boxes];
-    var box_type = jsPsych.randomization.repeat(all_boxes, 1)
+    var all_boxes = [num_boxes, type_boxes, entropy_boxes];
 
-    var shuffled_boxes = Object.values(jsPsych.randomization.repeat(box_type[0], 1)[0])
+    var factors = {
+      utt: [simple_utt, complex_utt],
+      boxes: all_boxes,
+      side: [1,2]
+    }
 
-    var utts = [{utt: complex_utt,
-        data: {utt_type: 'complex', test_part: 'test', boxes: shuffled_boxes}},
-        {utt: simple_utt, data: {utt_type: 'simple', test_part: 'test', boxes: shuffled_boxes}}];
+    var full_design = jsPsych.randomization.factorial(factors, 1);
+
+    var i;
+
+    for(i = 0; i < full_design.length; i++) {
+
+      full_design[i].data = {test_part: 'test'}
+
+      if(full_design[i].utt == complex_utt) {
+        full_design[i].data['utt_type'] = 'complex'
+        if(full_design[i].side == 1) {
+          full_design[i].boxes.reverse();
+          full_design[i].data['correct_side'] = 0;
+        } else {
+          full_design[i].data['correct_side'] = 1;
+        }
+      } else {
+        full_design[i].data['utt_type'] = 'simple'
+        if(full_design[i].side == 2) {
+          full_design[i].boxes.reverse();
+          full_design[i].data['correct_side'] = 1;
+        } else {
+          full_design[i].data['correct_side'] = 0;
+        }
+      }
+      switch(full_design[i].boxes) {
+        case num_boxes:
+          full_design[i].data['boxes_type'] = 'num'
+          break;
+        case type_boxes:
+          full_design[i].data['boxes_type'] = 'type'
+          break;
+        case entropy_boxes:
+          full_design[i].data['boxes_type'] = 'entropy'
+      }
+    }
 
     var consent = {
       type:'external-html',
@@ -45,21 +79,17 @@
       cont_btn: "start"
     };
 
-    timeline.push(consent);
+    console.log(full_design)
 
-    /* define welcome message trial */
-    var welcome_block = {
-      type: "html-keyboard-response",
-      stimulus: "Welcome to the experiment. Press any key to begin."
-    };
-    timeline.push(welcome_block);
+    timeline.push(consent);
 
     /* define instructions trial */
     var instructions = {
-      type: "html-keyboard-response",
+      type: "html-button-response",
       stimulus: "<p>In this experiment, you will see some aliens talk " +
-          "and make judgments about what they are talking about." +
-          "<p>Press any key to begin.</p>",
+          "and make judgments about what they are talking about.",
+      choices: ['Start'],
+      data: {test_part: 'setup'},
       post_trial_gap: 2000
     };
     timeline.push(instructions);
@@ -99,12 +129,12 @@
         "</div>";
       },
       data: jsPsych.timelineVariable('data'),
-      choices: shuffled_boxes,
+      choices: jsPsych.timelineVariable('boxes'),
       button_html: '<button style="border:none;"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
     }
 
     var test_procedure = {
-      timeline_variables: utts,
+      timeline_variables: full_design,
       timeline: [hi_alien, show_box, test_box],
       sample: {
         type: 'without-replacement',
