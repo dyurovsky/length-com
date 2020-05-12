@@ -147,7 +147,7 @@
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
-        dataToSend = jsPsych.data.get().csv()
+        dataToSend = jsPsych.data.get().filter({trial_type: 'html-slider-response'}).csv()
         turk.submit(dataToSend)
         //jsPsych.data.displayData();
       }
