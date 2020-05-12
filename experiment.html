@@ -47,7 +47,7 @@
       if(full_design[i].utt == complex_utt) {
         full_design[i].data['utt_type'] = 'complex'
         if(full_design[i].side == 1) {
-          full_design[i].boxes.reverse();
+          full_design[i].boxes = full_design[i].boxes.reverse().slice();
           full_design[i].data['correct_side'] = 0;
         } else {
           full_design[i].data['correct_side'] = 1;
@@ -55,7 +55,7 @@
       } else {
         full_design[i].data['utt_type'] = 'simple'
         if(full_design[i].side == 2) {
-          full_design[i].boxes.reverse();
+          full_design[i].boxes = full_design[i].boxes.reverse().slice();
           full_design[i].data['correct_side'] = 1;
         } else {
           full_design[i].data['correct_side'] = 0;
@@ -81,7 +81,7 @@
 
     console.log(full_design)
 
-    timeline.push(consent);
+    //timeline.push(consent);
 
     /* define instructions trial */
     var instructions = {
