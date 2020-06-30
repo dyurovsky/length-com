@@ -1,0 +1,57 @@
+---
+title: "length-com-pilot"
+output: html_document
+---
+
+```{r load-libraries, library, message=F, results='hide', warning=FALSE}
+library(tidyverse)
+library(here)
+library(knitr)
+library(tidyboot)
+library(lme4)
+library(broom.mixed)
+library(RColorBrewer)
+
+opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+               error = FALSE, cache = TRUE, tidy = FALSE)
+theme_set(theme_classic(base_size = 16))
+```
+
+```{r read-csv}
+read_file <- function(file) {
+
+  path = paste("data/", file, sep = "")
+  csv_out <- read_csv(here(path))
+  id <- str_remove(file, ".csv")
+  csv_out$subid <- rep(id, nrow(csv_out))
+ 
+ return(csv_out)
+}
+
+file_list <- list.files(path = here("data/"), pattern = "\\.csv$")
+
+raw_data <- map(file_list, read_file) %>%
+  bind_rows() %>%
+  mutate(responses = str_remove_all(responses, "[\"{Q}0:]")) %>%
+  mutate(accuracy = (button_pressed == correct_side), accuracy = as.numeric(accuracy))
+
+```
+
+```{r analysis}
+mean_data <- raw_data %>%
+  filter(test_part == "test") %>%
+  group_by(boxes_type, utt_type) %>%
+  tidyboot_mean(column = accuracy)
+
+mean_data %>%
+  ggplot(aes(fill = utt_type, x = boxes_type, y = mean)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9))
+
+```
+
+```{r list-responses}
+head(raw_data %>% filter(test_part == "comment") %>% select(responses), 30)
+
+```

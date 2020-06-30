@@ -3,25 +3,32 @@
   <head>
     <title>Alien language game</title>
     <script src="jspsych-6.1.0/jspsych.js"></script>
-    <script src="mmturkey-0.6.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-html-button-response.js"></script>
+    <script src="jspsych-6.1.0/plugins/jspsych-survey-text.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="consent/consent.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="data-anonymizer.js"></script>
     <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css"></link>
+    <script src="mmturkey-0.6.js"></script>
   </head>
   <body></body>
-  <script>
 
+<script>
+
+  	/* get info from turk */
+  	var turkInfo = jsPsych.turk.turkInfo();
+
+  	// anonymizer for worker IDs
+	var a = new DataAnonymizer();
+  	
     /* create timeline */
     var timeline = [];
 
     // utts
     var complex_utt = "<i>\"Toma zem zorp bidaku midu osh gipu!\"</i>"
     var simple_utt = "<i>\"Toma!\"</i>"
-
-
-    //const random_utt = utts[Math.floor(Math.random() * utts.length)];
 
     // boxes
     var num_boxes = ['num_objects/box_1', 'num_objects/box_2']
@@ -40,27 +47,10 @@
 
     var i;
 
-    for(i = 0; i < full_design.length; i++) {
+    for (i = 0; i < full_design.length; i++) {
 
       full_design[i].data = {test_part: 'test'}
 
-      if(full_design[i].utt == complex_utt) {
-        full_design[i].data['utt_type'] = 'complex'
-        if(full_design[i].side == 1) {
-          full_design[i].boxes = full_design[i].boxes.reverse().slice();
-          full_design[i].data['correct_side'] = 0;
-        } else {
-          full_design[i].data['correct_side'] = 1;
-        }
-      } else {
-        full_design[i].data['utt_type'] = 'simple'
-        if(full_design[i].side == 2) {
-          full_design[i].boxes = full_design[i].boxes.reverse().slice();
-          full_design[i].data['correct_side'] = 1;
-        } else {
-          full_design[i].data['correct_side'] = 0;
-        }
-      }
       switch(full_design[i].boxes) {
         case num_boxes:
           full_design[i].data['boxes_type'] = 'num'
@@ -71,18 +61,44 @@
         case entropy_boxes:
           full_design[i].data['boxes_type'] = 'entropy'
       }
+
+      if (full_design[i].utt == complex_utt) {
+        full_design[i].data['utt_type'] = 'complex'
+        if (full_design[i].side == 1) {
+          full_design[i].boxes = full_design[i].boxes.reverse().slice();
+          full_design[i].data['correct_side'] = 0;
+        } else {
+          full_design[i].data['correct_side'] = 1;
+        }
+      } else {
+        full_design[i].data['utt_type'] = 'simple'
+        if (full_design[i].side == 2) {
+          full_design[i].boxes = full_design[i].boxes.reverse().slice();
+          full_design[i].data['correct_side'] = 1;
+        } else {
+          full_design[i].data['correct_side'] = 0;
+        }
+      }
     }
+
+
+    // reCAPTCHA object
+	var recaptcha = {
+    	type: "external-html",
+    	url: "recaptcha.html",
+    	cont_btn: "submit_button",
+    	execute_script: true
+	};
+	timeline.push(recaptcha);
 
     var consent = {
       type:'external-html',
       url: "consent/consent.html",
       cont_btn: "start"
     };
+    timeline.push(consent);
 
-    console.log(full_design)
-
-    //timeline.push(consent);
-
+    
     /* define instructions trial */
     var instructions = {
       type: "html-button-response",
@@ -110,7 +126,7 @@
     var show_box = {
       type: 'html-button-response',
       stimulus: function() { return "<p>Dax has a box. <br>" +
-        " He opened the box and looked inside <br><br>" +
+        " He opens the box and looks inside. <br><br>" +
         "Then, Dax says, " + jsPsych.timelineVariable('utt', true) + "</p>" +
         "<div style='width: 700px;'>" +
         "<div style='float: center;'><img src='img/alien1.png' width='250' height='300'></img></div>" +
@@ -130,7 +146,7 @@
       },
       data: jsPsych.timelineVariable('data'),
       choices: jsPsych.timelineVariable('boxes'),
-      button_html: '<button style="border:none;"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
+      button_html: '<button style="border:none; background-color:#ffffff"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
     }
 
     var test_procedure = {
@@ -143,13 +159,41 @@
     }
     timeline.push(test_procedure);
 
-    /* start the experiment */
+    var comment_trial = {
+  		type: 'survey-text',
+  		questions: [
+    		{prompt: "Why did you choose the box you chose?"}
+  		],
+  		data: {test_part: 'comment'}
+	}
+	timeline.push(comment_trial);
+
+    function saveData(name, data) {
+    	var xhr = new XMLHttpRequest();
+  		xhr.open('POST', 'write_data.php'); 
+  		xhr.setRequestHeader('Content-Type', 'application/json');
+  		xhr.send(JSON.stringify({filename: name, filedata: data}));
+	}
+
+	var endscreen = {
+		type: 'html-button-response',
+		stimulus: "<p>This is the end of the study. Thank you for participating!</p>",
+		choices: ['Finish']
+	};
+
+	timeline.push(endscreen);
+
+	/* start the experiment */
     jsPsych.init({
       timeline: timeline,
       on_finish: function() {
-        dataToSend = jsPsych.data.get().filter({trial_type: 'html-slider-response'}).csv()
-        turk.submit(dataToSend)
-        //jsPsych.data.displayData();
+      	if (turkInfo.outsideTurk) {
+  			var file_name = a.anonymize("test_data")
+  		} else {
+  			var file_name = a.anonymize("data_data_data")
+  		}
+      	saveData(file_name, jsPsych.data.get().csv());
+      	turk.submit(jsPsych.data.get().csv());
       }
     });
   </script>
