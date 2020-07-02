@@ -1,2 +1,7 @@
 *DS_Store
 .Rproj.user
+.Rhistory
+package-lock.json
+node_modules/*
+*_cache/*
+*_files/*
