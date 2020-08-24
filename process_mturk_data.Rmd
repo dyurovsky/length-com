@@ -18,9 +18,43 @@ theme_set(theme_classic(base_size = 18))
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r read-csv}
+read_file <- function(file) {
+
+  path = paste("raw_data/run_2_within_ss/", file, sep = "")
+  csv_out <- read_csv(here(path))
+  id <- str_remove(file, ".csv")
+  csv_out$subid <- rep(id, nrow(csv_out))
+ 
+ return(csv_out)
+}
+
+file_list <- list.files(path = here("raw_data/run_2_within_ss/"), pattern = "\\.csv$")
+
+raw_data <- map(file_list, read_file) %>%
+  bind_rows() %>%
+  rename(left_box = box_1, right_box = box_2) %>%
+  mutate(responses = str_remove_all(responses, "[\"{Q}0:]"),
+         left_box = str_remove(left_box, "num_objects/"),
+         left_box = str_remove(left_box, "num_types/"),
+         right_box = str_remove(right_box, "num_objects/"),
+         right_box = str_remove(right_box, "num_types/"),
+         selected_box = if_else(test_part == "box_selection", 
+                               ifelse(button_pressed == 1, right_box, left_box), ""),
+         accuracy = if_else(test_part == "box_selection",
+                            if_else(selected_box == "box_1" & utt == "simple_utt" |
+                                      selected_box == "box_2" & utt == "complex_utt", 
+                                    1, 0), 0))
+  
+
+
+#write_csv(raw_data, here("data/run_2_within_ss.csv"))
+```
+
+
 ```{r load data}
 
-files <- list.files(here("raw_data"), pattern = "*.json", full.names = T)
+files <- list.files(here("raw_data/run_1_btwn_ss"), pattern = "*.json", full.names = T)
 
 df <- lapply(files, fromJSON)
 res <- lapply(df, summary)

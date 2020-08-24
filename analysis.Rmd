@@ -18,28 +18,13 @@ theme_set(theme_classic(base_size = 16))
 ```
 
 ```{r read-csv}
-read_file <- function(file) {
-
-  path = paste("data/", file, sep = "")
-  csv_out <- read_csv(here(path))
-  id <- str_remove(file, ".csv")
-  csv_out$subid <- rep(id, nrow(csv_out))
- 
- return(csv_out)
-}
-
-file_list <- list.files(path = here("data/"), pattern = "\\.csv$")
-
-raw_data <- map(file_list, read_file) %>%
-  bind_rows() %>%
-  mutate(responses = str_remove_all(responses, "[\"{Q}0:]")) %>%
-  mutate(accuracy = (button_pressed == correct_side), accuracy = as.numeric(accuracy))
-
+raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
+  filter(test_part == "box_selection" | test_part == "comment")
 ```
 
 ```{r analysis}
 mean_data <- raw_data %>%
-  filter(test_part == "test") %>%
+  filter(test_part == "box_selection") %>%
   group_by(boxes_type, utt_type) %>%
   tidyboot_mean(column = accuracy)
 
