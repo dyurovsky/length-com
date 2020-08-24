@@ -21,51 +21,24 @@ theme_set(theme_classic(base_size = 16))
 
 ```{r read-csv}
 raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
-  filter(test_part == "box_selection" | test_part == "comment")
-```
-
-```{r analysis}
-mean_data <- raw_data %>%
-  filter(test_part == "box_selection") %>%
-  group_by(boxes_type, utt_type) %>%
-  tidyboot_mean(column = accuracy)
-
-read_file <- function(file) {
-
-  path = paste("data/", file, sep = "")
-  csv_out <- read_csv(here(path))
-  id <- str_remove(file, ".csv")
-  csv_out$subid <- rep(id, nrow(csv_out))
- 
- return(csv_out)
-}
-
-file_list <- list.files(path = here("data/"), pattern = "*.csv")
-
-raw_data <- map_dfr(file_list, read_file) %>%
-  mutate(responses = str_remove_all(responses, "[\"{Q}0:]")) %>%
-  mutate(accuracy = (button_pressed == correct_side), 
-         accuracy = as.numeric(accuracy), 
+  filter(test_part == "box_selection" | test_part == "comment") %>%
+  mutate(accuracy = as.numeric(accuracy),
          rt = rt/1000)
-
 ```
 
 ```{r analysis}
 subj_data <- raw_data %>%
-  filter(test_part == "test") %>%
-  mutate(chose_complex = case_when(
-    utt_type == "complex" ~ accuracy,
-    T ~ 1 - accuracy)) %>%
-  pivot_longer(cols = c(chose_complex, rt), names_to = "measure")
+  filter(test_part == "box_selection") %>%
+  pivot_longer(cols = c(accuracy, rt), names_to = "measure")
 
 mean_data <- subj_data %>%
-  group_by(measure, boxes_type, utt_type) %>%
+  group_by(measure, boxes_type, utt) %>%
   tidyboot_mean(value)
 ```
 
-```{r plot, fig.width = 5, fig.height = 4}
-ggplot(mean_data %>% filter(measure == "chose_complex"),
-       aes(fill = utt_type, x = boxes_type, y = empirical_stat)) +
+```{r plot-1, fig.width = 5, fig.height = 4}
+ggplot(mean_data %>% filter(measure == "accuracy"),
+       aes(fill = utt, x = boxes_type, y = empirical_stat)) +
   geom_bar(position="dodge", stat="identity") +
   geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
                 width = 0.2, position=position_dodge(.9)) + 
@@ -74,7 +47,39 @@ ggplot(mean_data %>% filter(measure == "chose_complex"),
   scale_fill_ptol()
 
 ggplot(mean_data %>% filter(measure == "rt"),
-       aes(fill = utt_type, x = boxes_type, y = empirical_stat)) +
+       aes(fill = utt, x = boxes_type, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  labs(x = "", y = "response time (sec)") + 
+  scale_fill_ptol()
+```
+
+```{r complex-analysis}
+chose_complex_data <- raw_data %>%
+  filter(test_part == "box_selection") %>%
+  mutate(chose_complex = case_when(
+    utt == "complex" ~ accuracy,
+    T ~ 1 - accuracy)) %>%
+  pivot_longer(cols = c(chose_complex, rt), names_to = "measure")
+
+chose_complex_mean_data <- chose_complex_data %>%
+  group_by(measure, boxes_type, utt) %>%
+  tidyboot_mean(value)
+```
+
+```{r plot-complex, fig.width = 5, fig.height = 4}
+ggplot(chose_complex_mean_data %>% filter(measure == "chose_complex"),
+       aes(fill = utt, x = boxes_type, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "", y = "chose complex (prop.)") + 
+  scale_fill_ptol()
+
+ggplot(chose_complex_mean_data %>% filter(measure == "rt"),
+       aes(fill = utt, x = boxes_type, y = empirical_stat)) +
   geom_bar(position="dodge", stat="identity") +
   geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
                 width = 0.2, position=position_dodge(.9)) + 
@@ -85,10 +90,7 @@ ggplot(mean_data %>% filter(measure == "rt"),
 ```{r list-responses}
 raw_data %>% 
   group_by(subid) %>%
-  mutate(utt_type = first(na.omit(utt_type)),
-         boxes_type = first(na.omit(boxes_type))) %>%
   filter(test_part == "comment") %>% 
-  ungroup() %>%
-  select(boxes_type, utt_type, responses) %>%
+  select(responses) %>%
   datatable()
 ```
