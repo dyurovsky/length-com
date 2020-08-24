@@ -11,6 +11,8 @@ library(tidyboot)
 library(lme4)
 library(broom.mixed)
 library(RColorBrewer)
+library(DT)
+library(ggthemes)
 
 opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
                error = FALSE, cache = TRUE, tidy = FALSE)
@@ -28,15 +30,65 @@ mean_data <- raw_data %>%
   group_by(boxes_type, utt_type) %>%
   tidyboot_mean(column = accuracy)
 
-mean_data %>%
-  ggplot(aes(fill = utt_type, x = boxes_type, y = mean)) +
-  geom_bar(position="dodge", stat="identity") +
-  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
-                width = 0.2, position=position_dodge(.9))
+read_file <- function(file) {
+
+  path = paste("data/", file, sep = "")
+  csv_out <- read_csv(here(path))
+  id <- str_remove(file, ".csv")
+  csv_out$subid <- rep(id, nrow(csv_out))
+ 
+ return(csv_out)
+}
+
+file_list <- list.files(path = here("data/"), pattern = "*.csv")
+
+raw_data <- map_dfr(file_list, read_file) %>%
+  mutate(responses = str_remove_all(responses, "[\"{Q}0:]")) %>%
+  mutate(accuracy = (button_pressed == correct_side), 
+         accuracy = as.numeric(accuracy), 
+         rt = rt/1000)
 
 ```
 
-```{r list-responses}
-head(raw_data %>% filter(test_part == "comment") %>% select(responses), 30)
+```{r analysis}
+subj_data <- raw_data %>%
+  filter(test_part == "test") %>%
+  mutate(chose_complex = case_when(
+    utt_type == "complex" ~ accuracy,
+    T ~ 1 - accuracy)) %>%
+  pivot_longer(cols = c(chose_complex, rt), names_to = "measure")
 
+mean_data <- subj_data %>%
+  group_by(measure, boxes_type, utt_type) %>%
+  tidyboot_mean(value)
+```
+
+```{r plot, fig.width = 5, fig.height = 4}
+ggplot(mean_data %>% filter(measure == "chose_complex"),
+       aes(fill = utt_type, x = boxes_type, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "", y = "chose complex (prop.)") + 
+  scale_fill_ptol()
+
+ggplot(mean_data %>% filter(measure == "rt"),
+       aes(fill = utt_type, x = boxes_type, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  labs(x = "", y = "response time (sec)") + 
+  scale_fill_ptol()
+```
+
+```{r list-responses}
+raw_data %>% 
+  group_by(subid) %>%
+  mutate(utt_type = first(na.omit(utt_type)),
+         boxes_type = first(na.omit(boxes_type))) %>%
+  filter(test_part == "comment") %>% 
+  ungroup() %>%
+  select(boxes_type, utt_type, responses) %>%
+  datatable()
 ```
