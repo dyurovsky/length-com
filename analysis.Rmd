@@ -26,9 +26,17 @@ raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
          rt = rt/1000)
 ```
 
+```{r subjs}
+keep_subs <- raw_data %>%
+  filter(test_part == "box_selection") %>%
+  group_by(subid) %>%
+  summarise(n = n_distinct(selected_box)) %>%
+  filter(n > 1)
+```
+
 ```{r analysis}
 subj_data <- raw_data %>%
-  filter(test_part == "box_selection") %>%
+  filter(subid %in% keep_subs$subid, test_part == "box_selection") %>%
   mutate(chose_complex = if_else(selected_box == "box_2", 1, 0)) %>%
   pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure")
 
@@ -37,7 +45,7 @@ mean_data <- subj_data %>%
   tidyboot_mean(value)
 ```
 
-```{r plot-1, fig.width = 5, fig.height = 4}
+```{r plot, fig.width = 5, fig.height = 4}
 ggplot(mean_data %>% filter(measure == "accuracy"),
        aes(fill = utt, x = boxes_type, y = empirical_stat)) +
   geom_bar(position="dodge", stat="identity") +
@@ -72,3 +80,4 @@ raw_data %>%
   select(responses) %>%
   datatable()
 ```
+
