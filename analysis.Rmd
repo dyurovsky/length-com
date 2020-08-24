@@ -29,7 +29,8 @@ raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
 ```{r analysis}
 subj_data <- raw_data %>%
   filter(test_part == "box_selection") %>%
-  pivot_longer(cols = c(accuracy, rt), names_to = "measure")
+  mutate(chose_complex = if_else(selected_box == "box_2", 1, 0)) %>%
+  pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure")
 
 mean_data <- subj_data %>%
   group_by(measure, boxes_type, utt) %>%
@@ -43,7 +44,7 @@ ggplot(mean_data %>% filter(measure == "accuracy"),
   geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
                 width = 0.2, position=position_dodge(.9)) + 
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
-  labs(x = "", y = "chose complex (prop.)") + 
+  labs(x = "", y = "accuracy") + 
   scale_fill_ptol()
 
 ggplot(mean_data %>% filter(measure == "rt"),
@@ -53,37 +54,14 @@ ggplot(mean_data %>% filter(measure == "rt"),
                 width = 0.2, position=position_dodge(.9)) + 
   labs(x = "", y = "response time (sec)") + 
   scale_fill_ptol()
-```
 
-```{r complex-analysis}
-chose_complex_data <- raw_data %>%
-  filter(test_part == "box_selection") %>%
-  mutate(chose_complex = case_when(
-    utt == "complex" ~ accuracy,
-    T ~ 1 - accuracy)) %>%
-  pivot_longer(cols = c(chose_complex, rt), names_to = "measure")
-
-chose_complex_mean_data <- chose_complex_data %>%
-  group_by(measure, boxes_type, utt) %>%
-  tidyboot_mean(value)
-```
-
-```{r plot-complex, fig.width = 5, fig.height = 4}
-ggplot(chose_complex_mean_data %>% filter(measure == "chose_complex"),
+ggplot(mean_data %>% filter(measure == "chose_complex"),
        aes(fill = utt, x = boxes_type, y = empirical_stat)) +
   geom_bar(position="dodge", stat="identity") +
   geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
                 width = 0.2, position=position_dodge(.9)) + 
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
   labs(x = "", y = "chose complex (prop.)") + 
-  scale_fill_ptol()
-
-ggplot(chose_complex_mean_data %>% filter(measure == "rt"),
-       aes(fill = utt, x = boxes_type, y = empirical_stat)) +
-  geom_bar(position="dodge", stat="identity") +
-  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
-                width = 0.2, position=position_dodge(.9)) + 
-  labs(x = "", y = "response time (sec)") + 
   scale_fill_ptol()
 ```
 
