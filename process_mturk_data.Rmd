@@ -89,3 +89,38 @@ for(i in 1:length(df)){
 #write_csv(raw_data, here("data/turk_data.csv"))
 
 ```
+
+```{r process jspsych data}
+
+filenames <- list.files(here("production-results/"), pattern = "*.json", full.names = T)
+
+ldf <- lapply(filenames, fromJSON)
+jsdata = NULL
+
+for(i in 1:length(ldf)){
+  tmp_trials <- ldf[[i]]$answers$data
+  tmp <- read.csv(textConnection(tmp_trials))
+  if (length(tmp$stimulus) > 8) {
+    tmp_data <- tmp[c(8,9,10),] %>%
+      select(c(rt, button_pressed, test_part, utt, boxes_type, 
+               box_1, box_2, responses)) %>%
+      rename(left_box = box_1, right_box = box_2) %>%
+      mutate(subid = as.numeric(i),
+         responses = str_remove_all(responses, "[\"{Q}0:]"),
+         left_box = str_remove(left_box, "num_objects/"),
+         left_box = str_remove(left_box, "num_types/"),
+         right_box = str_remove(right_box, "num_objects/"),
+         right_box = str_remove(right_box, "num_types/"),
+         selected_box = if_else(test_part == "box_selection", 
+                               ifelse(button_pressed == 1, right_box, left_box), ""),
+         accuracy = if_else(test_part == "box_selection",
+                            if_else(selected_box == "box_1" & utt == "simple_utt" |
+                                      selected_box == "box_2" & utt == "complex_utt", 
+                                    1, 0), 0))
+    jsdata <- rbind(jsdata, tmp_data)
+  }
+}
+
+write_csv(jsdata, here("data/jspsych_data.csv"))
+
+```

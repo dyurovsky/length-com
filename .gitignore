@@ -3,5 +3,6 @@
 .Rhistory
 package-lock.json
 node_modules/*
+production-results/*
 *_cache/*
 *_files/*
