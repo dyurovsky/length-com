@@ -33,17 +33,6 @@
     var obj_1 = objects[0]
     var obj_2 = objects[1]
 
-    // boxes
-    // var num_boxes = ['num_objects/box_1', 'num_objects/box_2']
-    // var type_boxes =  ['num_types/box_1', 'num_types/box_2']
-
-    // var all_boxes = [num_boxes, type_boxes];
-
-    // var box_type = jsPsych.randomization.sampleWithoutReplacement(all_boxes, 1)
-    // var boxes = jsPsych.randomization.repeat(box_type[0], 1)
-    // var box_1 = boxes[0]
-    // var box_2 = boxes[1]
-
     var utts = jsPsych.randomization.repeat(["complex_utt", "simple_utt"], 1)
     var utt_1 = utts[0]
     var utt_2 = utts[1]
@@ -106,9 +95,9 @@
       stimulus: function() { return "<p>Two aliens come in, and each look into the box<br>" +
         "<div style='width: 700px;'>" +
         "<div style='float: left;'><img src='img/lostalien1.png' width='191' height='200'></img></div>" +
-        "<div style='float: right;'><img src='img/lostalien2.png' width='191' height='200'></img></div>"+
-        "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
-        "</div><br>";
+        "<div style='float: right;'><img src='img/lostalien2.png' width='121' height='200'></img></div>"+
+        "<br><br><div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
+        "</div>";
       },
       choices: ['Continue'],
       data: {test_part: 'setup'},
@@ -117,12 +106,12 @@
 
     var alien_talk1 = {
       type: 'html-button-response',
-      stimulus: function() { return "<p>Both aliens say which object they lost.<br><br>" +
-        "This one says, " + get_utt(utt_1) + "</p>" +
+      stimulus: function() { return "<p>Both aliens say which object they lost.</p>" +
+        "<p>This one says, " + get_utt(utt_1) + "</p>" +
         "<div style='width: 700px;'>" +
-        "<div style='float: left;'><img src='img/lostalien1.png' width='191' height='200'></img></div>"+
+        "<div style='float: left;'><img src='img/lostalien1.png' width='191' height='200'></img></div><br><br>"+
         "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
-        "</div><br>";
+        "</div>";
       },
       choices: ['Continue'],
       data: {test_part: 'setup', utt: utt_1},
@@ -133,7 +122,7 @@
       type: 'html-button-response',
       stimulus: function(){ return "<p>The other one says, " + get_utt(utt_2) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: right;'><img src='img/lostalien2.png' width='191' height='200'></img></div>"+
+        "<div style='float: right;'><img src='img/lostalien2.png' width='121' height='200'></img></div><br><br>"+
         "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
         "</div>";
       },
@@ -142,38 +131,36 @@
       post_trial_gap: 500
     }
 
-    var pre_test = {
+    var test_1 = {
       type: 'html-button-response',
-      stimulus: function(){ return "<p>Which object did this alien lose?</p>" +
+      stimulus: function(){ return "<p>Which object did this alien lose? Remember, they said,</p>" +
+        "<p>" + get_utt(utt_1) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: center;'><img src='img/lostalien1.png' width='191' height='200'></img></div>"+
-        "<div style='float: right;'><img src='img/complex.png' width='200' height='200'></img></div>" +
-        "<div style='float: left;'><img src='img/simple.png' width='200' height='200'></img></div>" +
+        "<div style='float: center;'><img src='img/lostalien1.png' width='191' height='200'></img></div><br><br>"+
         "</div>";
       },
-      choices: [box_1, box_2],
+      choices: [obj_1, obj_2],
       post_trial_gap: 500,
-      data: {utt: utt_1, boxes_type: box_type, box_1: box_1, box_2: box_2, test_part: "box_selection"},
+      data: {utt: utt_1, obj_1: obj_1, obj_2: obj_2, test_part: "obj_selection"},
       button_html: '<button style="border:none; background-color:#ffffff"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
     }
 
-    var test_box_2 = {
+    var test_2 = {
       type: 'html-button-response',
-      stimulus: function(){ return "<p>Remember, Dax looked in one box and said " + get_utt(utt_1) + "</p>" +
-        "<p>Then Dax looked in the other box and said " + get_utt(utt_2) + "</p>" + 
-        "<p>Which box do you think Dax was " +
-        "looking in when he said<br>" + get_utt(utt_2) + "?</p>" +
+      stimulus: function(){ return "<p>Which object did this alien lose? Remember, they said,</p>" +
+        "<p>" + get_utt(utt_2) + "</p>" +
         "<div style='width: 700px;'>"+
+        "<div style='float: center;'><img src='img/lostalien2.png' width='121' height='200'></img></div><br><br>"+
         "</div>";
       },
-      choices: [box_1, box_2],
+      choices: [obj_1, obj_2],
       post_trial_gap: 500,
-      data: {utt: utt_2, boxes_type: box_type, box_1: box_1, box_2: box_2, test_part: "box_selection"},
+      data: {utt: utt_2, obj_1: obj_1, obj_2: obj_2, test_part: "obj_selection"},
       button_html: '<button style="border:none; background-color:#ffffff"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
     }
 
     var test_procedure = {
-      timeline: [hi_alien, show_box_1, show_box_2, show_boxes, test_box_1, test_box_2],
+      timeline: [intro, show_aliens, alien_talk1, alien_talk2, test_1, test_2],
       sample: {
         type: 'without-replacement',
         size: 1
@@ -184,18 +171,18 @@
     var comment_trial = {
   		type: 'survey-text',
   		questions: [
-    		{prompt: "Briefly, why did you choose the boxes you chose?"}
+    		{prompt: "Briefly, why did you choose the objects you chose?"}
   		],
   		data: {test_part: 'comment'}
-	}
-	timeline.push(comment_trial);
+	   }
+	   timeline.push(comment_trial);
 
     function saveData(name, data) {
     	var xhr = new XMLHttpRequest();
   		xhr.open('POST', 'write_data.php'); 
   		xhr.setRequestHeader('Content-Type', 'application/json');
   		xhr.send(JSON.stringify({filename: name, filedata: data}));
-	}
+	   }
 
 	var endscreen = {
 		type: 'html-button-response',
