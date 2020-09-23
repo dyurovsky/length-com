@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Alien language game</title>
+    <title>Alien lost and found game</title>
     <script src="jspsych-6.1.0/jspsych.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-html-button-response.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-survey-text.js"></script>
@@ -27,11 +27,10 @@
     var timeline = [];
 
     // objects
-    var all_objects = ['simple', 'complex']
-
-    var objects = jsPsych.randomization.sampleWithoutReplacement(all_objects, 1)
+    var objects = jsPsych.randomization.repeat(['simple', 'complex'], 1)
     var obj_1 = objects[0]
     var obj_2 = objects[1]
+    console.log(objects)
 
     var utts = jsPsych.randomization.repeat(["complex_utt", "simple_utt"], 1)
     var utt_1 = utts[0]
@@ -83,7 +82,7 @@
       stimulus: "<p>You work at an alien lost and found." +
       '<br><br>Here is a box of lost objects.</i><br>' +
       "<div style='width: 700px;'>"+
-      "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
+      "<div style='float: center;'><img src='img/lostbox2.png' height='300'></img></div>" +
       "</div><br>",
       choices: ['Continue'],
       data: {test_part: 'setup'},
@@ -94,10 +93,10 @@
       type: 'html-button-response',
       stimulus: function() { return "<p>Two aliens come in, and each look into the box<br>" +
         "<div style='width: 700px;'>" +
-        "<div style='float: left;'><img src='img/lostalien1.png' width='191' height='200'></img></div>" +
-        "<div style='float: right;'><img src='img/lostalien2.png' width='121' height='200'></img></div>"+
-        "<br><br><div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
-        "</div>";
+        "<div style='float: left;'><img src='img/lostalien1.png' height='200'></img></div>" +
+        "<div style='float: right;'><img src='img/lostalien2.png' height='200'></img></div>"+
+        "<br><div style='float: center;'><img src='img/lostbox2.png' height='300'></img></div>" +
+        "</div><br>";
       },
       choices: ['Continue'],
       data: {test_part: 'setup'},
@@ -109,9 +108,9 @@
       stimulus: function() { return "<p>Both aliens say which object they lost.</p>" +
         "<p>This one says, " + get_utt(utt_1) + "</p>" +
         "<div style='width: 700px;'>" +
-        "<div style='float: left;'><img src='img/lostalien1.png' width='191' height='200'></img></div><br><br>"+
-        "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
-        "</div>";
+        "<div style='float: left;'><img src='img/lostalien1.png' height='200'></img></div><br><br>"+
+        "<div style='float: center;'><img src='img/lostbox2.png' height='300'></img></div>" +
+        "</div><br>";
       },
       choices: ['Continue'],
       data: {test_part: 'setup', utt: utt_1},
@@ -122,9 +121,9 @@
       type: 'html-button-response',
       stimulus: function(){ return "<p>The other one says, " + get_utt(utt_2) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: right;'><img src='img/lostalien2.png' width='121' height='200'></img></div><br><br>"+
-        "<div style='float: center;'><img src='img/lostbox2.png' width='300' height='210'></img></div>" +
-        "</div>";
+        "<div style='float: right;'><img src='img/lostalien2.png' height='200'></img></div><br><br>"+
+        "<div style='float: center;'><img src='img/lostbox2.png' height='300' height='210'></img></div>" +
+        "</div><br>";
       },
       choices: ['Continue'],
       data: {test_part: 'setup', utt: utt_2},
@@ -136,13 +135,13 @@
       stimulus: function(){ return "<p>Which object did this alien lose? Remember, they said,</p>" +
         "<p>" + get_utt(utt_1) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: center;'><img src='img/lostalien1.png' width='191' height='200'></img></div><br><br>"+
+        "<div style='float: center;'><img src='img/lostalien1.png' height='200'></img></div><br><br>"+
         "</div>";
       },
       choices: [obj_1, obj_2],
       post_trial_gap: 500,
       data: {utt: utt_1, obj_1: obj_1, obj_2: obj_2, test_part: "obj_selection"},
-      button_html: '<button style="border:none; background-color:#ffffff"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
+      button_html: '<button style="border:none; background-color:#ffffff"> <img width="100px" src = "img/%choice%.png"> </img> </button>'
     }
 
     var test_2 = {
@@ -150,13 +149,14 @@
       stimulus: function(){ return "<p>Which object did this alien lose? Remember, they said,</p>" +
         "<p>" + get_utt(utt_2) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: center;'><img src='img/lostalien2.png' width='121' height='200'></img></div><br><br>"+
+        "<div style='float: center;'><img src='img/lostalien2.png' height='200'></img></div><br><br>"+
         "</div>";
       },
       choices: [obj_1, obj_2],
       post_trial_gap: 500,
       data: {utt: utt_2, obj_1: obj_1, obj_2: obj_2, test_part: "obj_selection"},
-      button_html: '<button style="border:none; background-color:#ffffff"> <img width="250px" src = "img/%choice%.png"> </img> </button>'
+      button_html: '<button style="border:none; background-color:#ffffff"> <img width="100px" src = "img/%choice%.png"> </img> </button>',
+      margin_horizontal: '20px'
     }
 
     var test_procedure = {
