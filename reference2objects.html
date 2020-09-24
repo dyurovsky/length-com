@@ -143,13 +143,13 @@
       stimulus: function(){ return "<p>Which object did this alien lose?</p>" + 
         "<p>Remember, they said," + get_utt(utt_1) + "</p>" +
         "<div style='width: 700px;'>"+
-        "<div style='float: center;'><img src='" + alien_1 + "' height='200'></img></div><br><br>"+
+        "<div style='float: center;'><img src='" + alien_1 + "' height='200'></img><img scr = '" + box + "' height = '200'></img></div><br><br>"+
         "</div>";
       },
       choices: [obj_1, obj_2],
       post_trial_gap: 500,
       data: {utt: utt_1, box: box, obj_1: obj_1, obj_2: obj_2, test_part: "obj_selection"},
-      button_html: '<button style="border:none; background-color:#ffffff"> <img width="120px" src = %choice%> </img> </button>',
+      button_html: '<button style="border:none; background-color:#ffffff"> <img width="120px" src = %choice%></img></button>',
       margin_horizontal: '50px'
     }
 

@@ -2,7 +2,7 @@
 .Rproj.user
 .Rhistory
 package-lock.json
-node_modules/*
+mturk/*
 production-results/*
 *_cache/*
 *_files/*
