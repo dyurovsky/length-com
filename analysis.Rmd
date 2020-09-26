@@ -24,6 +24,10 @@ raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
   filter(test_part == "box_selection" | test_part == "comment") %>%
   mutate(accuracy = as.numeric(accuracy),
          rt = rt/1000)
+
+raw_ref_data <- read.csv(here("data/jspsych_data.csv")) %>%
+  filter(test_part == "obj_selection" | test_part == "comment") %>%
+  mutate(accuracy = as.numeric(accuracy))
 ```
 
 ```{r subjs}
@@ -42,6 +46,13 @@ subj_data <- raw_data %>%
 
 mean_data <- subj_data %>%
   group_by(measure, boxes_type, utt) %>%
+  tidyboot_mean(value)
+
+ref_data <- raw_ref_data %>%
+  filter(test_part == "obj_selection") %>%
+  mutate(chose_complex = if_else(selected_obj == "complex.png", 1, 0)) %>%
+  pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
+  group_by(measure, utt) %>%
   tidyboot_mean(value)
 ```
 
@@ -71,6 +82,20 @@ ggplot(mean_data %>% filter(measure == "chose_complex"),
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
   labs(x = "", y = "chose complex (prop.)") + 
   scale_fill_ptol()
+```
+
+```{r ref plots, fig.width=5, fig.height=4}
+# reference plots
+
+ggplot(ref_data %>% filter(measure == "chose_complex"),
+       aes(fill = utt, x = utt, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "", y = "chose complex (prop.)") + 
+  scale_fill_ptol()
+
 ```
 
 ```{r list-responses}

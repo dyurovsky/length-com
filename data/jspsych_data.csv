@@ -1,361 +1,201 @@
-rt,button_pressed,test_part,utt,boxes_type,left_box,right_box,responses,subid,selected_box,accuracy
-723.1600000013714,0,box_selection,simple_utt,num_objects,box_2,box_1,,37,box_2,0
-848.9550000012969,0,box_selection,complex_utt,num_objects,box_2,box_1,,37,box_2,1
-5259.534999997413,NA,comment,,,,,i like it,37,,0
-3805.999999982305,0,box_selection,simple_utt,num_objects,box_1,box_2,,38,box_1,1
-23471.000000019558,0,box_selection,complex_utt,num_objects,box_1,box_2,,38,box_1,0
-35635.999999940395,NA,comment,,,,,because that is correct,38,,0
-5732.645000000048,0,box_selection,complex_utt,num_objects,box_1,box_2,,39,box_1,0
-2750.605000000185,1,box_selection,simple_utt,num_objects,box_1,box_2,,39,box_2,0
-34545.47000000003,NA,comment,,,,,Ther is many round on the box so i belive this is right,39,,0
-9604.495000094175,0,box_selection,simple_utt,num_objects,box_1,box_2,,40,box_1,1
-3503.569999942556,1,box_selection,complex_utt,num_objects,box_1,box_2,,40,box_2,1
-22590.53499996662,NA,comment,,,,,I think the longer response was connected to seeing the box with more stuff inside.,40,,0
-45631.640000035986,1,box_selection,complex_utt,num_objects,box_1,box_2,,41,box_2,1
-3118.1300000753254,0,box_selection,simple_utt,num_objects,box_1,box_2,,41,box_1,1
-21151.259999955073,NA,comment,,,,,"The longer the sentence, the more objects in the box",41,,0
-5883.305000024848,1,box_selection,complex_utt,num_objects,box_1,box_2,,42,box_2,1
-4332.6949999900535,0,box_selection,simple_utt,num_objects,box_1,box_2,,42,box_1,1
-39944.02000005357,NA,comment,,,,,"The box with a lot of objects inside seemed like a more complex thing, so the longer statement seemed like it might make more sense if he was talking about that one",42,,0
-24059.979999961797,1,box_selection,complex_utt,num_types,box_2,box_1,,43,box_1,0
-3817.009999998845,1,box_selection,simple_utt,num_types,box_2,box_1,,43,box_1,1
-57794.779999996535,NA,comment,,,,,I chose the right box because it shows objects of the same shapes and color and I think that's easier for Dax to recognize and choose.,43,,0
-12107.160000014119,1,box_selection,simple_utt,num_objects,box_2,box_1,,44,box_1,1
-2564.005000051111,1,box_selection,complex_utt,num_objects,box_2,box_1,,44,box_1,0
-10039.459999999963,NA,comment,,,,,2,44,,0
-1820.0000000651926,1,box_selection,complex_utt,num_objects,box_1,box_2,,45,box_2,1
-4042.000000132248,1,box_selection,simple_utt,num_objects,box_1,box_2,,45,box_2,0
-15986.99999996461,NA,comment,,,,,verl likre box,45,,0
-6546.794999972917,0,box_selection,complex_utt,num_types,box_1,box_2,,55,box_1,0
-2116.7099999729544,1,box_selection,simple_utt,num_types,box_1,box_2,,55,box_2,0
-36422.720000031404,NA,comment,,,,,very nice box,55,,0
-4332.649999996647,0,box_selection,simple_utt,num_objects,box_1,box_2,,56,box_1,1
-1689.3599999602884,1,box_selection,complex_utt,num_objects,box_1,box_2,,56,box_2,1
-30309.81999996584,NA,comment,,,,,I think the shorter sentence means \two\ and the other one means there are more in here so should be longer,56,,0
-51635.00000000931,0,box_selection,complex_utt,num_types,box_1,box_2,,57,box_1,0
-7287.000000011176,1,box_selection,simple_utt,num_types,box_1,box_2,,57,box_2,0
-43179.99999993481,NA,comment,,,,,because that robot is see that box,57,,0
-8599.100000006729,1,box_selection,complex_utt,num_objects,box_1,box_2,,58,box_2,1
-2392.099999997299,0,box_selection,simple_utt,num_objects,box_1,box_2,,58,box_1,1
-11318.899999998393,NA,comment,,,,,I chose the shorter phrase for the box with less stuff,58,,0
-12478.999999992084,1,box_selection,complex_utt,num_objects,box_1,box_2,,59,box_2,1
-5934.000000008382,0,box_selection,simple_utt,num_objects,box_1,box_2,,59,box_1,1
-122734.99999998603,NA,comment,,,,,I thought the short answer was \There's nothing\ so selected that box with less beads for that answer and so the other one.,59,,0
-1976.0000000242144,0,box_selection,complex_utt,num_types,box_2,box_1,,60,box_2,1
-1472.0000000670552,0,box_selection,simple_utt,num_types,box_2,box_1,,60,box_2,0
-32725.000000093132,NA,comment,,,,,this box have colorful things,60,,0
-27778.815000026952,0,box_selection,complex_utt,num_types,box_2,box_1,,61,box_2,1
-5195.965000020806,1,box_selection,simple_utt,num_types,box_2,box_1,,61,box_1,1
-36246.140000002924,NA,comment,,,,,those words are simple. So it may represent the same kind of things,61,,0
-3034.060000034515,1,box_selection,complex_utt,num_types,box_1,box_2,,62,box_2,1
-618.0000000167638,0,box_selection,simple_utt,num_types,box_1,box_2,,62,box_1,1
-21607.504999963567,NA,comment,,,,,I kind of just went off of instinct. I think it'd be easier to describe multiples of the same with fewer words.,62,,0
-15351.82499999064,1,box_selection,complex_utt,num_types,box_1,box_2,,63,box_2,1
-3754.3600000062725,0,box_selection,simple_utt,num_types,box_1,box_2,,63,box_1,1
-45767.324999993434,NA,comment,,,,,words indicating level's of excitement ,63,,0
-6126.000000163913,1,box_selection,complex_utt,num_types,box_2,box_1,,64,box_1,0
-1887.0000001043081,0,box_selection,simple_utt,num_types,box_2,box_1,,64,box_2,0
-24671.000000089407,NA,comment,,,,,i think good choose,64,,0
-1066.7749999993248,1,box_selection,complex_utt,num_types,box_1,box_2,,65,box_2,1
-692.5500000070315,1,box_selection,simple_utt,num_types,box_1,box_2,,65,box_2,0
-6484.324999997625,NA,comment,,,,,just a guess,65,,0
-8241.594999970403,1,box_selection,simple_utt,num_objects,box_2,box_1,,66,box_1,1
-2397.1549999550916,1,box_selection,complex_utt,num_objects,box_2,box_1,,66,box_1,0
-14231.530000048224,NA,comment,,,,,FROK IS TWO TOT,66,,0
-87533.825,0,box_selection,simple_utt,num_objects,box_2,box_1,,67,box_2,0
-18310.504999999917,1,box_selection,complex_utt,num_objects,box_2,box_1,,67,box_1,0
-31419.390000000014,NA,comment,,,,,lot of bubbles in box,67,,0
-9314.939999952912,0,box_selection,complex_utt,num_objects,box_2,box_1,,68,box_2,1
-4268.659999943338,1,box_selection,simple_utt,num_objects,box_2,box_1,,68,box_1,1
-26979.43499998655,NA,comment,,,,,I thought that perhaps the number of words used correlated to the number of balls in the boxes,68,,0
-15046.120000071824,1,box_selection,complex_utt,num_types,box_1,box_2,,69,box_2,1
-5577.195000019856,0,box_selection,simple_utt,num_types,box_1,box_2,,69,box_1,1
-41742.33999999706,NA,comment,,,,,because the longer sentence is very long and the box with the variety of things in it seems to fit his words,69,,0
-3513.4000005200505,0,box_selection,complex_utt,num_types,box_1,box_2,,70,box_1,0
-1003.0450001358986,1,box_selection,simple_utt,num_types,box_1,box_2,,70,box_2,0
-7143.7249993905425,NA,comment,,,,,yes,70,,0
-8365.139999979874,1,box_selection,simple_utt,num_types,box_2,box_1,,71,box_1,1
-3813.770000007935,0,box_selection,complex_utt,num_types,box_2,box_1,,71,box_2,1
-40364.17499999516,NA,comment,,,,,Badu Mep sounds like it was boring. Dax's longer expression must be because the box was full of surprising variety,71,,0
-6524.129999997967,0,box_selection,simple_utt,num_objects,box_2,box_1,,72,box_2,0
-1840.7650000008289,0,box_selection,complex_utt,num_objects,box_2,box_1,,72,box_2,1
-16549.090000000433,NA,comment,,,,,He said bedo mep.  I don't know.,72,,0
-3668.614999995043,0,box_selection,simple_utt,num_types,box_2,box_1,,73,box_2,0
-7059.320000000298,0,box_selection,complex_utt,num_types,box_2,box_1,,73,box_2,1
-6421.520000003511,NA,comment,,,,,nice,73,,0
-6889.529999927618,0,box_selection,simple_utt,num_objects,box_1,box_2,,74,box_1,1
-3670.7300000125542,1,box_selection,complex_utt,num_objects,box_1,box_2,,74,box_2,1
-14027.85000007134,NA,comment,,,,,"I figured the more words he used, the more balls were inside.",74,,0
-24490.99999992177,0,box_selection,simple_utt,num_types,box_1,box_2,,75,box_1,1
-2719.000000040978,0,box_selection,complex_utt,num_types,box_1,box_2,,75,box_1,0
-35975.00000009313,NA,comment,,,,,alien good sit box,75,,0
-8503.15500004217,0,box_selection,complex_utt,num_objects,box_2,box_1,,76,box_2,1
-7375.594999990426,0,box_selection,simple_utt,num_objects,box_2,box_1,,76,box_2,0
-32819.36500000302,NA,comment,,,,,bubble count is more then for another box,76,,0
-1687.9149999986112,0,box_selection,simple_utt,num_types,box_1,box_2,,77,box_1,1
-964.3450000003213,0,box_selection,complex_utt,num_types,box_1,box_2,,77,box_1,0
-45999.78000000192,NA,comment,,,,,nice game,77,,0
-15155.80000000773,0,box_selection,simple_utt,num_types,box_2,box_1,,78,box_2,0
-3978.835000016261,1,box_selection,complex_utt,num_types,box_2,box_1,,78,box_1,0
-15336.364999995567,NA,comment,,,,,IT'S THE CORRECT BOX,78,,0
-7455.5950000003795,1,box_selection,simple_utt,num_types,box_1,box_2,,79,box_2,0
-2300.030000000319,0,box_selection,complex_utt,num_types,box_1,box_2,,79,box_1,0
-20903.860000000335,NA,comment,,,,,I figured the longer chain of phrases corresponded to more detailed items.,79,,0
-2943,1,box_selection,complex_utt,num_objects,box_1,box_2,,80,box_2,1
-2027,0,box_selection,simple_utt,num_objects,box_1,box_2,,80,box_1,1
-67695,NA,comment,,,,,"Dax talked a lot more about one of the boxes, it made sense to me that that box would have more objects inside. It also made sense to me that the box he was terse about (only saying two words), would correspond to the box with only a couple of objects inside.",80,,0
-19338.220000005094,1,box_selection,simple_utt,num_types,box_2,box_1,,81,box_1,1
-7731.890000010026,0,box_selection,complex_utt,num_types,box_2,box_1,,81,box_2,1
-30612.65999999887,NA,comment,,,,,base on his short term and long phrase,81,,0
-5227.914999937639,0,box_selection,simple_utt,num_types,box_1,box_2,,82,box_1,1
-76774.7649999801,1,box_selection,complex_utt,num_types,box_1,box_2,,82,box_2,1
-25051.725000026636,NA,comment,,,,,I like this ..,82,,0
-2529.3949999977485,1,box_selection,complex_utt,num_objects,box_1,box_2,,83,box_2,1
-1097.3200000007637,0,box_selection,simple_utt,num_objects,box_1,box_2,,83,box_1,1
-13878.494999997201,NA,comment,,,,,It corresponding with how many words and dots...?,83,,0
-38644.51499999268,0,box_selection,complex_utt,num_types,box_1,box_2,,84,box_1,0
-2237.055000005057,1,box_selection,simple_utt,num_types,box_1,box_2,,84,box_2,0
-20618.689999973867,NA,comment,,,,,I think bidaku means ball or blue.,84,,0
-8165.880000000012,0,box_selection,simple_utt,num_types,box_1,box_2,,85,box_1,1
-1615.2899999999645,1,box_selection,complex_utt,num_types,box_1,box_2,,85,box_2,1
-39197.78999999994,NA,comment,,,,,I chose it based on the length of the sentence. Longer sentence means the content of the box is more varied. ,85,,0
-14437.039999756962,1,box_selection,complex_utt,num_types,box_1,box_2,,86,box_2,1
-5097.094999626279,1,box_selection,simple_utt,num_types,box_1,box_2,,86,box_2,0
-49844.81499996036,NA,comment,,,,,boxes have different images,86,,0
-6632.000000041444,1,box_selection,complex_utt,num_types,box_1,box_2,,87,box_2,1
-1607.0000000181608,1,box_selection,simple_utt,num_types,box_1,box_2,,87,box_2,0
-7024.999999965075,NA,comment,,,,,GOOD,87,,0
-8085.450000013225,0,box_selection,simple_utt,num_types,box_1,box_2,,88,box_1,1
-3161.67000005953,1,box_selection,complex_utt,num_types,box_1,box_2,,88,box_2,1
-24588.89499993529,NA,comment,,,,,The one with just one item type would elicit a shorter response.,88,,0
-11449.824999901466,0,box_selection,simple_utt,num_objects,box_1,box_2,,89,box_1,1
-3172.2249999875203,1,box_selection,complex_utt,num_objects,box_1,box_2,,89,box_2,1
-14255.434999940917,NA,comment,,,,,He had more to say about the one that had more in it.,89,,0
-9752.855000027921,1,box_selection,simple_utt,num_types,box_2,box_1,,90,box_1,1
-4599.405000044499,0,box_selection,complex_utt,num_types,box_2,box_1,,90,box_2,1
-41544.17000000831,NA,comment,,,,,I was thinking that the longer speech was talking about the box with the multi colored trinkets inside.,90,,0
-17777,1,box_selection,simple_utt,num_types,box_2,box_1,,91,box_1,1
-6869,0,box_selection,complex_utt,num_types,box_2,box_1,,91,box_2,1
-35384,NA,comment,,,,,Since more different words were used for the box with a variety of things,91,,0
-5240.000000005239,0,box_selection,complex_utt,num_types,box_2,box_1,,92,box_2,1
-10887.999999991735,1,box_selection,simple_utt,num_types,box_2,box_1,,92,box_1,1
-7245.999999999185,NA,comment,,,,,2,92,,0
-7135.5899999998655,0,box_selection,simple_utt,num_objects,box_1,box_2,,93,box_1,1
-1902.2600000007515,1,box_selection,complex_utt,num_objects,box_1,box_2,,93,box_2,1
-33914.58500000044,NA,comment,,,,,There are 2 balls seems like a shorter sentence for any language,93,,0
-9634.999999999985,1,box_selection,complex_utt,num_types,box_2,box_1,,94,box_1,0
-3677.000000000131,0,box_selection,simple_utt,num_types,box_2,box_1,,94,box_2,0
-17739.000000000044,NA,comment,,,,,Just a guess.,94,,0
-9710.725000011735,0,box_selection,complex_utt,num_objects,box_2,box_1,,95,box_2,1
-8656.030000071041,1,box_selection,simple_utt,num_objects,box_2,box_1,,95,box_1,1
-60360.82499998156,NA,comment,,,,,Based on the ammmount of words used to describe the contents.,95,,0
-18204.46500000253,0,box_selection,simple_utt,num_objects,box_1,box_2,,96,box_1,1
-4615.289999997913,1,box_selection,complex_utt,num_objects,box_1,box_2,,96,box_2,1
-41426.47500000021,NA,comment,,,,,I associated the number of bubbles with each alien word.,96,,0
-11767.829999967944,0,box_selection,simple_utt,num_objects,box_2,box_1,,97,box_2,0
-4737.139999982901,1,box_selection,complex_utt,num_objects,box_2,box_1,,97,box_1,0
-52568.20500001777,NA,comment,,,,,As per Dax's choice of box and the words he said.,97,,0
-3932.9000000143424,1,box_selection,simple_utt,num_objects,box_2,box_1,,98,box_1,1
-2273.8000000827014,0,box_selection,complex_utt,num_objects,box_2,box_1,,98,box_2,1
-35965.10000003036,NA,comment,,,,,I think that the box with more items inside gave the alien more to talk about because there were more things to describe.,98,,0
-6448.090000019874,1,box_selection,simple_utt,num_types,box_2,box_1,,99,box_1,1
-3714.6300000022165,1,box_selection,complex_utt,num_types,box_2,box_1,,99,box_1,0
-7188.885000010487,NA,comment,,,,,water,99,,0
-8904.999999795109,1,box_selection,simple_utt,num_objects,box_2,box_1,,109,box_1,1
-2294.999999925494,0,box_selection,complex_utt,num_objects,box_2,box_1,,109,box_2,1
-13641.99999999255,NA,comment,,,,,ITS MY DECISION ,109,,0
-1531.8350000015926,0,box_selection,complex_utt,num_objects,box_1,box_2,,110,box_1,0
-698.5849999982747,1,box_selection,simple_utt,num_objects,box_1,box_2,,110,box_2,0
-7420.505000001867,NA,comment,,,,,i like it,110,,0
-2079.230000001189,1,box_selection,complex_utt,num_objects,box_2,box_1,,111,box_1,0
-1425.149999999121,0,box_selection,simple_utt,num_objects,box_2,box_1,,111,box_2,0
-51105.59999999896,NA,comment,,,,,i like to choose ,111,,0
-7978.460000013001,0,box_selection,simple_utt,num_types,box_1,box_2,,112,box_1,1
-1482.0499999914318,1,box_selection,complex_utt,num_types,box_1,box_2,,112,box_2,1
-13733.795000007376,NA,comment,,,,,The longer sentence implied more items,112,,0
-9537.470000010217,0,box_selection,simple_utt,num_objects,box_1,box_2,,113,box_1,1
-991.3100000121631,1,box_selection,complex_utt,num_objects,box_1,box_2,,113,box_2,1
-9773.610000003828,NA,comment,,,,,The second seemed like it described more things.,113,,0
-5234.664999996312,1,box_selection,simple_utt,num_types,box_2,box_1,,114,box_1,1
-6239.5399999804795,0,box_selection,complex_utt,num_types,box_2,box_1,,114,box_2,1
-24750.754999986384,NA,comment,,,,,the first box was all the same so less words were said. ,114,,0
-5597.999999998137,0,box_selection,complex_utt,num_types,box_1,box_2,,115,box_1,0
-1396.0000000079162,1,box_selection,simple_utt,num_types,box_1,box_2,,115,box_2,0
-26233.00000000745,NA,comment,,,,,it is good,115,,0
-3432.0000000006985,1,box_selection,complex_utt,num_objects,box_2,box_1,,116,box_1,0
-1497.9999999923166,1,box_selection,simple_utt,num_objects,box_2,box_1,,116,box_1,1
-14963.999999992666,NA,comment,,,,,2,116,,0
-5606.000000145286,1,box_selection,simple_utt,num_types,box_2,box_1,,117,box_1,1
-628.000000026077,0,box_selection,complex_utt,num_types,box_2,box_1,,117,box_2,1
-44673.0000001844,NA,comment,,,,,The short sentence would most likely described something similar while the longer is more descriptive because there are several shapes and colors.,117,,0
-10964.999999996508,0,box_selection,complex_utt,num_objects,box_1,box_2,,118,box_1,0
-5591.000000000349,1,box_selection,simple_utt,num_objects,box_1,box_2,,118,box_2,0
-22475.00000000582,NA,comment,,,,,I BELIEVE THATS WHAT DAX SAID,118,,0
-18209.100000000035,1,box_selection,simple_utt,num_objects,box_2,box_1,,119,box_1,1
-3762.4199999991106,0,box_selection,complex_utt,num_objects,box_2,box_1,,119,box_2,1
-44992.97999999908,NA,comment,,,,,"I connect more language with more dots. Like, \Oh wow look how many are in here!\ versus \Only two\",119,,0
-7879.999999999825,0,box_selection,complex_utt,num_objects,box_1,box_2,,120,box_1,0
-2139.0000000001164,1,box_selection,simple_utt,num_objects,box_1,box_2,,120,box_2,0
-10407.000000000175,NA,comment,,,,,it contains  the lot of materials,120,,0
-22213.99999999994,0,box_selection,complex_utt,num_objects,box_2,box_1,,121,box_2,1
-4707.999999998719,1,box_selection,simple_utt,num_objects,box_2,box_1,,121,box_1,1
-9300.999999999476,NA,comment,,,,,1,121,,0
-4204.939999995986,1,box_selection,simple_utt,num_types,box_1,box_2,,122,box_2,0
-6146.934999997029,1,box_selection,complex_utt,num_types,box_1,box_2,,122,box_2,1
-3023.0549999978393,NA,comment,,,,,i like it,122,,0
-2021.0000000079162,1,box_selection,simple_utt,num_objects,box_1,box_2,,123,box_2,0
-1989.000000001397,1,box_selection,complex_utt,num_objects,box_1,box_2,,123,box_2,1
-27168.000000005122,NA,comment,,,,,i think good choose,123,,0
-2836.9999999413267,0,box_selection,complex_utt,num_types,box_1,box_2,,124,box_1,0
-4302.000000025146,1,box_selection,simple_utt,num_types,box_1,box_2,,124,box_2,0
-15744.999999995343,NA,comment,,,,,jado mep,124,,0
-11745.000000111759,1,box_selection,complex_utt,num_objects,box_1,box_2,,125,box_2,1
-2531.999999890104,1,box_selection,simple_utt,num_objects,box_1,box_2,,125,box_2,0
-34466.0000000149,NA,comment,,,,,that box have lott of balls,125,,0
-9319.069999997737,0,box_selection,simple_utt,num_types,box_1,box_2,,126,box_1,1
-4835.845000008703,1,box_selection,complex_utt,num_types,box_1,box_2,,126,box_2,1
-26553.99000000034,NA,comment,,,,,the first box with words indicating it was not exciting,126,,0
-41778.9649999977,0,box_selection,complex_utt,num_objects,box_2,box_1,,127,box_2,1
-4563.2149999983085,1,box_selection,simple_utt,num_objects,box_2,box_1,,127,box_1,1
-37332.99000000261,NA,comment,,,,,less words probably are related to less spheres inside the box,127,,0
-7488.620000003721,1,box_selection,complex_utt,num_types,box_1,box_2,,128,box_2,1
-3311.8200000026263,0,box_selection,simple_utt,num_types,box_1,box_2,,128,box_1,1
-32844.33500000159,NA,comment,,,,,Longer sentences likely means talking about things in the box.,128,,0
-11215.800000005402,1,box_selection,simple_utt,num_objects,box_2,box_1,,129,box_1,1
-2715.695000020787,0,box_selection,complex_utt,num_objects,box_2,box_1,,129,box_2,1
-19101.690000039525,NA,comment,,,,,full ,129,,0
-4982.885000004899,1,box_selection,simple_utt,num_types,box_2,box_1,,130,box_1,1
-2249.0250000046217,0,box_selection,complex_utt,num_types,box_2,box_1,,130,box_2,1
-45153.440000001865,NA,comment,,,,,"It seemed reasonable that Dax's language would require more words for the box that contained many different shapes and sizes of objects, so \Bado mep\ probably referred to the simpler box",130,,0
-8472.810000006575,1,box_selection,complex_utt,num_types,box_1,box_2,,131,box_2,1
-2623.704999976326,0,box_selection,simple_utt,num_types,box_1,box_2,,131,box_1,1
-147377.94499995653,NA,comment,,,,,"I looked at the different boxes, I feel the longer text would be for the box with more toys.  The shorter text would describe the box with the spheres.",131,,0
-12304.869999992661,1,box_selection,simple_utt,num_types,box_2,box_1,,132,box_1,1
-6053.4500000067055,0,box_selection,complex_utt,num_types,box_2,box_1,,132,box_2,1
-27440.535000001546,NA,comment,,,,,I followed my gut,132,,0
-8031.304999999964,0,box_selection,simple_utt,num_objects,box_2,box_1,,133,box_2,0
-1661.7399999999907,1,box_selection,complex_utt,num_objects,box_2,box_1,,133,box_1,0
-9025.579999999987,NA,comment,,,,,correct one,133,,0
-9409.999999999854,1,box_selection,simple_utt,num_types,box_1,box_2,,134,box_2,0
-3008.9999999981956,0,box_selection,complex_utt,num_types,box_1,box_2,,134,box_1,0
-16591.00000000035,NA,comment,,,,,maybe thats correct answer,134,,0
-51646.000000007916,1,box_selection,complex_utt,num_objects,box_1,box_2,,135,box_2,1
-2567.9999999701977,0,box_selection,simple_utt,num_objects,box_1,box_2,,135,box_1,1
-57978.999999992084,NA,comment,,,,,\Bado mep.\,135,,0
-3541.674999985844,1,box_selection,complex_utt,num_objects,box_2,box_1,,172,box_1,0
-4793.7099999981,0,box_selection,simple_utt,num_objects,box_2,box_1,,172,box_2,0
-10901.895000017248,NA,comment,,,,,On my guessing.,172,,0
-27433.0000000773,1,box_selection,complex_utt,num_objects,box_1,box_2,,173,box_2,1
-8165.999999968335,1,box_selection,simple_utt,num_objects,box_1,box_2,,173,box_2,0
-28189.99999994412,NA,comment,,,,,Somewhat guessing,173,,0
-27399.000000033993,0,box_selection,complex_utt,num_objects,box_2,box_1,,174,box_2,1
-2181.9999999715947,1,box_selection,simple_utt,num_objects,box_2,box_1,,174,box_1,1
-21159.000000043306,NA,comment,,,,,yes  very nie,174,,0
-9422.999999980675,0,box_selection,simple_utt,num_types,box_1,box_2,,175,box_1,1
-3105.999999999767,1,box_selection,complex_utt,num_types,box_1,box_2,,175,box_2,1
-8991.99999999837,NA,comment,,,,,good,175,,0
-27672.00000002049,0,box_selection,simple_utt,num_objects,box_2,box_1,,176,box_2,0
-6593.999999924563,1,box_selection,complex_utt,num_objects,box_2,box_1,,176,box_1,0
-22898.999999975786,NA,comment,,,,,bado map was higher,176,,0
-7711.750000016764,0,box_selection,simple_utt,num_objects,box_2,box_1,,177,box_2,0
-1538.1599999964237,1,box_selection,complex_utt,num_objects,box_2,box_1,,177,box_1,0
-15081.085000070743,NA,comment,,,,,the alien says that is a good,177,,0
-4486.000000033528,0,box_selection,complex_utt,num_types,box_2,box_1,,178,box_2,1
-2108.999999705702,0,box_selection,simple_utt,num_types,box_2,box_1,,178,box_2,0
-68874.00000030175,NA,comment,,,,,colorful box like the box,178,,0
-6404.805000056513,1,box_selection,complex_utt,num_types,box_2,box_1,,179,box_1,0
-13178.07999998331,1,box_selection,simple_utt,num_types,box_2,box_1,,179,box_1,1
-21224.140000063926,NA,comment,,,,,NONE,179,,0
-4849,1,box_selection,simple_utt,num_objects,box_2,box_1,,180,box_1,1
-1191,0,box_selection,complex_utt,num_objects,box_2,box_1,,180,box_2,1
-22212,NA,comment,,,,,Because ine was longer and one was shorter.,180,,0
-54493.37499999092,0,box_selection,complex_utt,num_objects,box_2,box_1,,181,box_2,1
-7593.82499998901,0,box_selection,simple_utt,num_objects,box_2,box_1,,181,box_2,0
-23053.039999998873,NA,comment,,,,,I guess the box that has the most blue balls.,181,,0
-9788.335000019288,1,box_selection,simple_utt,num_objects,box_2,box_1,,182,box_1,1
-3028.8600000203587,0,box_selection,complex_utt,num_objects,box_2,box_1,,182,box_2,1
-20835.445000004256,NA,comment,,,,,Amount of words equals amount of items.,182,,0
-13824.000000022352,1,box_selection,simple_utt,num_types,box_1,box_2,,183,box_2,0
-1028.0000001657754,0,box_selection,complex_utt,num_types,box_1,box_2,,183,box_1,0
-9821.999999927357,NA,comment,,,,,On my idea about it,183,,0
-10182.894997298717,0,box_selection,complex_utt,num_objects,box_2,box_1,,184,box_2,1
-4448.685001581907,1,box_selection,simple_utt,num_objects,box_2,box_1,,184,box_1,1
-27290.695000439882,NA,comment,,,,,because I think the shorter phrase referred to the box with fewer balls,184,,0
-45186.99999991804,0,box_selection,complex_utt,num_types,box_1,box_2,,185,box_1,0
-7248.999999836087,1,box_selection,simple_utt,num_types,box_1,box_2,,185,box_2,0
-19077.99999974668,NA,comment,,,,,I GUESS I THINK,185,,0
-9016.499999997905,1,box_selection,complex_utt,num_types,box_1,box_2,,186,box_2,1
-3123.9999999961583,0,box_selection,simple_utt,num_types,box_1,box_2,,186,box_1,1
-31846.29999999015,NA,comment,,,,,I chose the longer phrase for the box with diffefent types of items and the shorter phrase for the box with all the same kind because its quicker to say that ,186,,0
-13807.000000000698,1,box_selection,simple_utt,num_types,box_1,box_2,,187,box_2,0
-1627.9999999969732,0,box_selection,complex_utt,num_types,box_1,box_2,,187,box_1,0
-6266.999999999825,NA,comment,,,,,Briefly,187,,0
-821.1000000010245,0,box_selection,simple_utt,num_objects,box_2,box_1,,188,box_2,0
-6869.225000002189,0,box_selection,complex_utt,num_objects,box_2,box_1,,188,box_2,1
-8029.7649999993155,NA,comment,,,,,big balls ,188,,0
-1583.7150000152178,0,box_selection,simple_utt,num_types,box_2,box_1,,189,box_2,0
-5069.900000002235,0,box_selection,complex_utt,num_types,box_2,box_1,,189,box_2,1
-6024.675000051502,NA,comment,,,,,varities in it ,189,,0
-3175.68000004394,1,box_selection,complex_utt,num_types,box_2,box_1,,190,box_1,0
-830.5799999507144,0,box_selection,simple_utt,num_types,box_2,box_1,,190,box_2,0
-5723.944999976084,NA,comment,,,,,,190,,0
-3932.2599999868544,0,box_selection,complex_utt,num_types,box_2,box_1,,191,box_2,1
-1819.0949999989243,1,box_selection,simple_utt,num_types,box_2,box_1,,191,box_1,1
-20994.670000000042,NA,comment,,,,,The longer sentence seemed like it had more details like the one box had way more details of items.,191,,0
-10435.39999999848,1,box_selection,complex_utt,num_types,box_1,box_2,,192,box_2,1
-2047.275000000809,0,box_selection,simple_utt,num_types,box_1,box_2,,192,box_1,1
-26909.009999999398,NA,comment,,,,,It seemed like the box with more options would generate more descriptive words compared to a box with one object which could be described in a shorter sentence.,192,,0
-7054.000000003725,0,box_selection,complex_utt,num_objects,box_2,box_1,,193,box_2,1
-2220.9999999031425,1,box_selection,simple_utt,num_objects,box_2,box_1,,193,box_1,1
-20203.999999910593,NA,comment,,,,,for my understanding,193,,0
-6304.000000003725,0,box_selection,simple_utt,num_types,box_2,box_1,,194,box_2,0
-18029.999999998836,0,box_selection,complex_utt,num_types,box_2,box_1,,194,box_2,1
-51404.999999998836,NA,comment,,,,,The box in the more circles and triangle and more character ,194,,0
-7544.000000227243,1,box_selection,complex_utt,num_types,box_1,box_2,,195,box_2,1
-34279.99999979511,0,box_selection,simple_utt,num_types,box_1,box_2,,195,box_1,1
-41497.999999672174,NA,comment,,,,,correct boxes,195,,0
-11612.88000002969,0,box_selection,simple_utt,num_objects,box_1,box_2,,196,box_1,1
-1627.3250000085682,0,box_selection,complex_utt,num_objects,box_1,box_2,,196,box_1,0
-150887.48500007205,NA,comment,,,,,is the low quantity of dots,196,,0
-1430.8400000008987,1,box_selection,complex_utt,num_objects,box_1,box_2,,197,box_2,1
-880.6899999981397,0,box_selection,simple_utt,num_objects,box_1,box_2,,197,box_1,1
-17959.790000000794,NA,comment,,,,,I tried to understand the alien best I could,197,,0
-2663.7750000008964,0,box_selection,simple_utt,num_objects,box_2,box_1,,198,box_2,0
-809.3299999964074,0,box_selection,complex_utt,num_objects,box_2,box_1,,198,box_2,1
-17214.03499999724,NA,comment,,,,,Many blue dots,198,,0
-25782.785000046715,1,box_selection,simple_utt,num_objects,box_2,box_1,,206,box_1,1
-4626.744999899529,1,box_selection,complex_utt,num_objects,box_2,box_1,,206,box_1,0
-56275.63500008546,NA,comment,,,,,Dox inside the box,206,,0
-14777.444999985164,1,box_selection,complex_utt,num_objects,box_1,box_2,,208,box_2,1
-6339.4700000062585,0,box_selection,simple_utt,num_objects,box_1,box_2,,208,box_1,1
-68980.24500001338,NA,comment,,,,,One box had more in it so I assumed the longer verbiage was correct and shorter verbiage was for the box with less items. ,208,,0
-6548.8100000075065,0,box_selection,complex_utt,num_objects,box_2,box_1,,209,box_2,1
-4175.61000000569,1,box_selection,simple_utt,num_objects,box_2,box_1,,209,box_1,1
-16176.380000004428,NA,comment,,,,,the first box had more balls in it than the second box,209,,0
-25356.67999999714,0,box_selection,simple_utt,num_objects,box_1,box_2,,219,box_1,1
-4784.165000019129,1,box_selection,complex_utt,num_objects,box_1,box_2,,219,box_2,1
-118876.04000000283,NA,comment,,,,,Simple words are used. That's the difference. Because the first box has only two blue balls. He says like blue balls. An the second one has many. That's why i choose those boxes eventually.,219,,0
-2870.164999992994,1,box_selection,complex_utt,num_objects,box_1,box_2,,220,box_2,1
-1219.505000000936,1,box_selection,simple_utt,num_objects,box_1,box_2,,220,box_2,0
-11503.17499999801,NA,comment,,,,,i like it,220,,0
-3137.3550000134856,0,box_selection,simple_utt,num_objects,box_2,box_1,,221,box_2,0
-196.75500004086643,1,box_selection,complex_utt,num_objects,box_2,box_1,,221,box_1,0
-17525.924999965355,NA,comment,,,,,no,221,,0
-5295.9999999948195,1,box_selection,complex_utt,num_objects,box_1,box_2,,222,box_2,1
-1398.0000000010477,1,box_selection,simple_utt,num_objects,box_1,box_2,,222,box_2,0
-28146.999999997206,NA,comment,,,,,more dots box filling,222,,0
-2298.7300000022515,0,box_selection,complex_utt,num_objects,box_2,box_1,,223,box_2,1
-1157.6500000010128,0,box_selection,simple_utt,num_objects,box_2,box_1,,223,box_2,0
-4787.225000000035,NA,comment,,,,,nice game,223,,0
-1271.0300000035204,0,box_selection,simple_utt,num_types,box_2,box_1,,224,box_2,0
-1127.3099999962142,0,box_selection,complex_utt,num_types,box_2,box_1,,224,box_2,1
-32630.124999996042,NA,comment,,,,,I LIKE TO CHOOSE THE BOX  ,224,,0
-6370.870000013383,0,box_selection,simple_utt,num_types,box_1,box_2,,225,box_1,1
-3630.0549999868963,1,box_selection,complex_utt,num_types,box_1,box_2,,225,box_2,1
-13567.774999974063,NA,comment,,,,,more variety of items would probably mean more words,225,,0
-71463.97000004072,0,box_selection,complex_utt,num_types,box_1,box_2,,226,box_1,0
-12186.195000074804,1,box_selection,simple_utt,num_types,box_1,box_2,,226,box_2,0
-22215.73499997612,NA,comment,,,,,it said second box so i choose,226,,0
-14743.999999947846,0,box_selection,simple_utt,num_types,box_1,box_2,,227,box_1,1
-7098.9999999292195,1,box_selection,complex_utt,num_types,box_1,box_2,,227,box_2,1
-86415.9999997355,NA,comment,,,,,i think my choosing correct ,227,,0
+rt,button_pressed,test_part,utt,box,left_obj,right_obj,responses,subid,selected_obj,accuracy
+13236.99999973178,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,1,complex.png,1
+4363.000000361353,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,1,simple.png,1
+25004.00000018999,NA,comment,,,,,Because it was really hot,1,,0
+3618.0000002495944,0,,,,,,,1,,0
+2091.8299999902956,0,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,2,complex.png,1
+1232.845000049565,1,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,2,simple.png,1
+20234.055000008084,NA,comment,,,,,There was too little information but to guess,2,,0
+1045.925000042189,0,,,,,,,2,,0
+10780.00000026077,0,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,3,complex.png,0
+2653.9999996311963,0,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,3,complex.png,1
+63719.99999973923,NA,comment,,,,,"It is choose the object into the box.So,i choose the objects.",3,,0
+1949.0000000223517,0,,,,,,,3,,0
+3004.4199999999837,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,4,complex.png,1
+1369.1549999998533,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,4,simple.png,1
+36949.345,NA,comment,,,,,The alien that said the longer sentence was probably describing the item he lost and the item I chose was more detailed compared to the other object.,4,,0
+14320.560000000114,0,,,,,,,4,,0
+2026.4099999330938,0,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,5,simple.png,0
+1173.644999973476,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,5,simple.png,1
+10028.289999812841,NA,comment,,,,,bal,5,,0
+1919.5300000719726,0,,,,,,,5,,0
+6825.470000039786,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,6,simple.png,1
+3084.614999999758,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,6,complex.png,1
+49467.829999979585,NA,comment,,,,,"I felt the simpler object, the ball, was best described by the first alien's short description. The second object was as complex as the second alien's description.",6,,0
+1443.7199999811128,0,,,,,,,6,,0
+9965.250000124797,1,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,7,simple.png,0
+2339.3950001336634,0,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,7,complex.png,0
+32989.659999962896,NA,comment,,,,,I felt the specificity in the response described the item,7,,0
+2395.429999800399,0,,,,,,,7,,0
+8534.56499997992,1,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,8,simple.png,1
+3323.554999951739,0,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,8,complex.png,1
+40261.15999999456,NA,comment,,,,,The names seem to fit the object based on the length of the word. ,8,,0
+1743.7749999808148,0,,,,,,,8,,0
+34265.00000001397,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,9,simple.png,1
+12971.000000019558,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,9,complex.png,1
+67738.99999994319,NA,comment,,,,,Because task instruction,9,,0
+4141.999999992549,0,,,,,,,9,,0
+5290.789999999106,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,10,simple.png,1
+25629.749999992782,1,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,10,simple.png,0
+12344.104999996489,NA,comment,,,,,"I kind of guessed, I wasn't too sure from the language.",10,,0
+1832.6000000088243,0,,,,,,,10,,0
+18439.99999994412,1,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,11,complex.png,0
+2297.000000020489,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,11,complex.png,1
+17903.999999864027,NA,comment,,,,,good,11,,0
+4287.000000011176,0,,,,,,,11,,0
+16237.335000012536,0,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,12,complex.png,0
+8693.66499996977,1,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,12,simple.png,0
+20068.465000018477,NA,comment,,,,,based on my opinion,12,,0
+1576.2550000217743,0,,,,,,,12,,0
+21120.999999926426,0,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,13,complex.png,0
+9785.000000032596,1,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,13,simple.png,0
+55348.99999992922,NA,comment,,,,,sentence length,13,,0
+3408.0000000540167,0,,,,,,,13,,0
+8044.999999925494,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,14,complex.png,1
+2522.999999928288,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,14,simple.png,1
+43766.99999999255,NA,comment,,,,,i just follow the instructions,14,,0
+3441.9999999227002,0,,,,,,,14,,0
+2319.2399999970803,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,15,complex.png,1
+4003.0449999903794,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,15,simple.png,1
+18363.81999999867,NA,comment,,,,,The complexity of the resquest.  Ball is a pretty straightforward word in our language.  ,15,,0
+1817.414999997709,0,,,,,,,15,,0
+3462.000000057742,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,16,complex.png,1
+1620.000000053551,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,16,simple.png,1
+25059.000000008382,NA,comment,,,,,More complex dialog for the more complex looking item,16,,0
+2537.000000011176,0,,,,,,,16,,0
+14242.999999958556,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,17,complex.png,1
+3521.0000000079162,1,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,17,complex.png,0
+12772.999999986496,NA,comment,,,,,its by the process,17,,0
+1572.0000000437722,0,,,,,,,17,,0
+88481.99999999633,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,18,simple.png,1
+4603.99999999936,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,18,complex.png,1
+8355.999999999767,NA,comment,,,,,GOOD,18,,0
+1332.9999999987194,0,,,,,,,18,,0
+6924.9999998137355,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,19,complex.png,1
+1418.00000006333,0,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,19,complex.png,0
+28556.00000009872,NA,comment,,,,,green alians,19,,0
+4289.999999804422,0,,,,,,,19,,0
+7821.724999928847,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,20,simple.png,1
+3669.054999947548,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,20,complex.png,1
+38686.005000025034,NA,comment,,,,,"I thought that if one of the two had a longer name, it would be the one with the more abnormal shape. Since that alien said more, I matched it with that.",20,,0
+2086.035000043921,0,,,,,,,20,,0
+21804.049999976996,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,21,complex.png,1
+5085.90499998536,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,21,simple.png,1
+24953.15999997547,NA,comment,,,,,it fits each alien,21,,0
+3041.7299999971874,0,,,,,,,21,,0
+7276.910000000498,1,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,22,simple.png,0
+15563.290000005509,0,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,22,complex.png,0
+15983.360000012908,NA,comment,,,,,green ball ,22,,0
+2363.1549999990966,0,,,,,,,22,,0
+3400.2000000036787,1,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,23,simple.png,0
+1006.8200000096112,0,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,23,complex.png,0
+14737.294999998994,NA,comment,,,,,base on the information presented,23,,0
+1189.0849999908824,0,,,,,,,23,,0
+1559.8600000375882,0,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,24,simple.png,0
+3078.6950000328943,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,24,simple.png,1
+4660.669999953825,NA,comment,,,,,NICE,24,,0
+1240.8749999594875,0,,,,,,,24,,0
+3757,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,25,simple.png,1
+1570,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,25,complex.png,1
+18921,NA,comment,,,,,I thought it would take less words to say green ball.,25,,0
+1304,0,,,,,,,25,,0
+3966.000000014901,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,26,simple.png,1
+10817.000000271946,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,26,complex.png,1
+20181.99999956414,NA,comment,,,,,alien lose,26,,0
+1899.0000002086163,0,,,,,,,26,,0
+9066.27000006847,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,27,simple.png,1
+2067.9800000507385,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,27,complex.png,1
+108940.41500007734,NA,comment,,,,,like,27,,0
+2286.365000065416,0,,,,,,,27,,0
+23664.00000010617,1,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,28,simple.png,0
+34959.000000031665,0,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,28,complex.png,0
+103273.0000000447,NA,comment,,,,,"Because,This answer is correct",28,,0
+5026.0000000707805,0,,,,,,,28,,0
+16228.750000009313,1,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,29,simple.png,0
+2108.01999992691,0,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,29,complex.png,0
+14029.345000046305,NA,comment,,,,,in my guess,29,,0
+2273.509999969974,0,,,,,,,29,,0
+127317.00000003912,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,30,simple.png,1
+2101.9999999552965,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,30,complex.png,1
+690081.9999999367,NA,comment,,,,,but he is alien,30,,0
+1706.99999993667,0,,,,,,,30,,0
+2672.435000000405,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,31,complex.png,1
+1606.4750000005006,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,31,simple.png,1
+23428.194999998595,NA,comment,,,,,I thought the ball would be described using less words.,31,,0
+1684.1949999998178,0,,,,,,,31,,0
+3452.8950001113117,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,32,complex.png,1
+1995.630000019446,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,32,simple.png,1
+15256.759999785572,NA,comment,,,,,The alien who spoke more needed the more complex looking item.,32,,0
+1141.1749999970198,0,,,,,,,32,,0
+3847.0000000088476,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,33,simple.png,1
+6865.999999979977,0,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,33,simple.png,0
+7871.000000042841,NA,comment,,,,,good,33,,0
+988.0000000121072,0,,,,,,,33,,0
+7747.5649998523295,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,34,simple.png,1
+1410.1549996994436,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,34,complex.png,1
+7982.445000205189,NA,comment,,,,,ball,34,,0
+1871.1799997836351,0,,,,,,,34,,0
+11633.764999976847,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,35,complex.png,1
+5218.419999990147,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,35,simple.png,1
+96795.3700000071,NA,comment,,,,,I chose the shorter phrase for the ball because it's a simple object that would probably take few words to describe. The more complicated object might need more words.,35,,0
+2657.0100000244565,0,,,,,,,35,,0
+4950.345000019297,0,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,36,complex.png,1
+1567.8299999563023,1,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,36,simple.png,1
+18129.744999983814,NA,comment,,,,,The more detailed item might have a longer description/name than the simple one.,36,,0
+5344.305000035092,0,,,,,,,36,,0
+5759.470000048168,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,37,simple.png,1
+1600.0899999635294,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,37,complex.png,1
+41836.02000004612,NA,comment,,,,,I equated the longer sentence to a more complicated object.,37,,0
+1386.8050000164658,0,,,,,,,37,,0
+6898.999999975786,1,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,38,complex.png,0
+5751.99999997858,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,38,complex.png,1
+28381.999999983236,NA,comment,,,,,This is inside the box.,38,,0
+2234.99999998603,0,,,,,,,38,,0
+16281.73500000003,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,39,complex.png,1
+33802.47500000043,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,39,simple.png,1
+52279.83499999982,NA,comment,,,,,from my guess,39,,0
+1762.4650000002584,0,,,,,,,39,,0
+21471.654999993858,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,40,simple.png,1
+3146.814999999944,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,40,complex.png,1
+28678.829999997048,NA,comment,,,,,I felt that it seemed most appropriate based on the recreations that I saw. ,40,,0
+1611.6049999982351,0,,,,,,,40,,0
+13402.999999932945,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,41,complex.png,1
+2564.9999999441206,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,41,simple.png,1
+35944.00000013411,NA,comment,,,,,"Because,This answer is correct",41,,0
+1767.9999999236315,0,,,,,,,41,,0
+7302.000000010594,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,42,complex.png,1
+2868.000000002212,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,42,simple.png,1
+52783.99999999965,NA,comment,,,,,both alien want that objects,42,,0
+1953.0000000086147,0,,,,,,,42,,0
+27182.000000029802,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,43,complex.png,1
+13709.999999962747,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,43,simple.png,1
+41000.99999993108,NA,comment,,,,,Bado mep,43,,0
+1466.0000000149012,0,,,,,,,43,,0
+2451.0000000009313,0,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,44,simple.png,0
+5060.9999999869615,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,44,simple.png,1
+15965.999999898486,NA,comment,,,,,i think so,44,,0
+1689.9999999441206,0,,,,,,,44,,0
+8891.000000061467,0,obj_selection,complex_utt,img/lostbox2b.png,complex.png,simple.png,,45,complex.png,1
+10221.99999995064,0,obj_selection,simple_utt,img/lostbox2b.png,complex.png,simple.png,,45,complex.png,0
+63263.00000003539,NA,comment,,,,,TOBA ZEM ZORP BIDAKU MIDU OSH GIPU,45,,0
+3793.999999994412,0,,,,,,,45,,0
+5573.59499996528,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,46,simple.png,1
+2435.949999955483,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,46,complex.png,1
+16033.070000004955,NA,comment,,,,,bayb,46,,0
+1521.584999980405,0,,,,,,,46,,0
+5001.344999996945,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,47,simple.png,1
+2053.649999987101,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,47,complex.png,1
+25494.36000001151,NA,comment,,,,,I chose the object that match with the aliens.,47,,0
+1571.5999999956694,0,,,,,,,47,,0
+6688.819999806583,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,48,simple.png,1
+1756.7349998280406,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,48,complex.png,1
+9866.180000128224,NA,comment,,,,,Because it lost,48,,0
+2707.759999902919,0,,,,,,,48,,0
+6112.01500000243,0,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,49,simple.png,0
+2990.8099999993283,1,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,49,complex.png,0
+27639.740000002348,NA,comment,,,,,"Not sure really I have no idea what they said, I figured the shorter sentence kept the plainer object, and the more complex sentence kept the complex object.",49,,0
+1135.9499999998661,0,,,,,,,49,,0
+10541.999999899417,1,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,50,complex.png,0
+8461.00000012666,0,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,50,simple.png,0
+11523.999999975786,NA,comment,,,,,Based upon analysis,50,,0
+1732.0000000763685,0,,,,,,,50,,0
