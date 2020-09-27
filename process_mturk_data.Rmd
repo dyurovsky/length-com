@@ -128,32 +128,59 @@ write_csv(jsdata, here("data/jspsych_data.csv"))
 ```{r process reference data}
 filenames <- list.files(here("mturk/production-results/"), pattern = "*.json", full.names = T)
 
+duplicates <- read.csv(here("mturk/2objworkers.csv")) %>%
+  rename(id = V1) %>%
+  mutate(id = as.character(id)) %>%
+  filter(duplicate == TRUE)
+
 ldf <- lapply(filenames, fromJSON)
 jsdata = NULL
 
 for(i in 1:length(ldf)){
-  tmp_trials <- ldf[[i]]$answers$data
-  tmp <- read.csv(textConnection(tmp_trials))
-  tmp_data <- tmp %>%
-      select(c(rt, button_pressed, test_part, utt, box, 
-               obj_1, obj_2, responses)) %>%
-      rename(left_obj = obj_1, right_obj = obj_2) %>%
-      mutate(subid = as.numeric(i),
-         responses = str_remove_all(responses, "[\"{Q}0:]"),
-         left_obj = str_remove(left_obj, "img/"),
-         left_obj = str_remove(left_obj, "img/"),
-         right_obj = str_remove(right_obj, "img/"),
-         right_obj = str_remove(right_obj, "img"),
-         selected_obj = if_else(test_part == "obj_selection", 
-                    ifelse(button_pressed == "1", right_obj, left_obj), ""),
-         accuracy = if_else(test_part == "obj_selection",
-                            if_else(selected_obj == "simple.png" & utt == "simple_utt" |
-                                selected_obj == "complex.png" & utt == "complex_utt", 
-                               1, 0), 0)
-         )
-    jsdata <- rbind(jsdata, tmp_data)
+  if(ldf[[i]]$WorkerId != duplicates$id[1] | 
+     ldf[[i]]$WorkerId != duplicates$id[2]){
+    tmp_trials <- ldf[[i]]$answers$data
+    tmp <- read.csv(textConnection(tmp_trials))
+    tmp_data <- tmp %>%
+        select(c(rt, button_pressed, test_part, utt, box, 
+                 obj_1, obj_2, responses)) %>%
+        rename(left_obj = obj_1, right_obj = obj_2) %>%
+        mutate(subid = as.numeric(i),
+           responses = str_remove_all(responses, "[\"{Q}0:]"),
+           left_obj = str_remove(left_obj, "img/"),
+           left_obj = str_remove(left_obj, "img/"),
+           right_obj = str_remove(right_obj, "img/"),
+           right_obj = str_remove(right_obj, "img"),
+           selected_obj = if_else(test_part == "obj_selection", 
+                      ifelse(button_pressed == "1", right_obj, left_obj), ""),
+           accuracy = if_else(test_part == "obj_selection",
+                              if_else(
+                                  selected_obj == "simple.png" & utt == "simple_utt" |
+                                  selected_obj == "complex.png" & utt == "complex_utt", 
+                                 1, 0), 0)
+           )
+      jsdata <- rbind(jsdata, tmp_data)
+    }
   }
 
-write_csv(jsdata, here("data/jspsych_data.csv"))
+write_csv(jsdata, here("data/2obj_data.csv"))
+
+```
+
+```{r unique workers}
+dfiles <- list.files(here("mturk/production-results/"), pattern = "*.json", full.names = T)
+
+allworkers <- lapply(dfiles, fromJSON)
+workers = NULL
+
+for(i in 1:length(allworkers)) {
+  id <- allworkers[[i]]$WorkerId
+  workers <- rbind(workers, id)
+}
+
+workers <- as.data.frame(workers) %>%
+  mutate(duplicate = duplicated(workers))
+
+write_csv(workers, here("mturk/2objworkers.csv"))
 
 ```
