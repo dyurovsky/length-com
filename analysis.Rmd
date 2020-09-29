@@ -25,7 +25,11 @@ raw_data <- read.csv(here("data/run_2_within_ss.csv")) %>%
   mutate(accuracy = as.numeric(accuracy),
          rt = rt/1000)
 
-raw_ref_data <- read.csv(here("data/jspsych_data.csv")) %>%
+raw_ref_data <- read.csv(here("data/2obj_data.csv")) %>%
+  filter(test_part == "obj_selection" | test_part == "comment") %>%
+  mutate(accuracy = as.numeric(accuracy))
+
+raw_ref4_data <- read.csv(here("data/4obj_data.csv")) %>%
   filter(test_part == "obj_selection" | test_part == "comment") %>%
   mutate(accuracy = as.numeric(accuracy))
 ```
@@ -35,6 +39,12 @@ keep_subs <- raw_data %>%
   filter(test_part == "box_selection") %>%
   group_by(subid) %>%
   summarise(n = n_distinct(selected_box)) %>%
+  filter(n > 1)
+
+ref_keep_subs <- raw_ref4_data %>%
+  filter(test_part == "obj_selection") %>%
+  group_by(subid) %>%
+  summarise(n = n_distinct(selected_obj)) %>%
   filter(n > 1)
 ```
 
@@ -49,6 +59,14 @@ mean_data <- subj_data %>%
   tidyboot_mean(value)
 
 ref_data <- raw_ref_data %>%
+  filter(test_part == "obj_selection") %>%
+  mutate(chose_complex = if_else(selected_obj == "complex.png", 1, 0)) %>%
+  pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
+  group_by(measure, utt) %>%
+  tidyboot_mean(value)
+
+ref4_data <- raw_ref4_data %>%
+  filter(subid %in% ref_keep_subs$subid) %>%
   filter(test_part == "obj_selection") %>%
   mutate(chose_complex = if_else(selected_obj == "complex.png", 1, 0)) %>%
   pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
@@ -94,6 +112,26 @@ ggplot(ref_data %>% filter(measure == "chose_complex"),
                 width = 0.2, position=position_dodge(.9)) + 
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
   labs(x = "", y = "chose complex (prop.)") + 
+  scale_fill_ptol()
+
+# 4 objects
+
+ggplot(ref4_data %>% filter(measure == "chose_complex"),
+       aes(fill = utt, x = utt, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "", y = "chose complex (prop.)") + 
+  scale_fill_ptol()
+
+ggplot(ref4_data %>% filter(measure == "accuracy"),
+       aes(fill = utt, x = utt, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "utterance type", y = "accuracy") + 
   scale_fill_ptol()
 
 ```

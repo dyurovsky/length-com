@@ -131,10 +131,6 @@ rt,button_pressed,test_part,utt,box,left_obj,right_obj,responses,subid,selected_
 6865.999999979977,0,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,33,simple.png,0
 7871.000000042841,NA,comment,,,,,good,33,,0
 988.0000000121072,0,,,,,,,33,,0
-7747.5649998523295,1,obj_selection,simple_utt,img/lostbox2a.png,complex.png,simple.png,,34,simple.png,1
-1410.1549996994436,0,obj_selection,complex_utt,img/lostbox2a.png,complex.png,simple.png,,34,complex.png,1
-7982.445000205189,NA,comment,,,,,ball,34,,0
-1871.1799997836351,0,,,,,,,34,,0
 11633.764999976847,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,35,complex.png,1
 5218.419999990147,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,35,simple.png,1
 96795.3700000071,NA,comment,,,,,I chose the shorter phrase for the ball because it's a simple object that would probably take few words to describe. The more complicated object might need more words.,35,,0
@@ -159,10 +155,6 @@ rt,button_pressed,test_part,utt,box,left_obj,right_obj,responses,subid,selected_
 3146.814999999944,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,40,complex.png,1
 28678.829999997048,NA,comment,,,,,I felt that it seemed most appropriate based on the recreations that I saw. ,40,,0
 1611.6049999982351,0,,,,,,,40,,0
-13402.999999932945,1,obj_selection,complex_utt,img/lostbox2b.png,simple.png,complex.png,,41,complex.png,1
-2564.9999999441206,0,obj_selection,simple_utt,img/lostbox2b.png,simple.png,complex.png,,41,simple.png,1
-35944.00000013411,NA,comment,,,,,"Because,This answer is correct",41,,0
-1767.9999999236315,0,,,,,,,41,,0
 7302.000000010594,1,obj_selection,complex_utt,img/lostbox2a.png,simple.png,complex.png,,42,complex.png,1
 2868.000000002212,0,obj_selection,simple_utt,img/lostbox2a.png,simple.png,complex.png,,42,simple.png,1
 52783.99999999965,NA,comment,,,,,both alien want that objects,42,,0

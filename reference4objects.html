@@ -10,6 +10,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css"></link>
     <script src="mmturkey-0.6.js"></script>
+    <script src="//uniqueturker.myleott.com/lib.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    (function(){
+        var ut_id = "55914093f244a2136370543a702d8002";
+        if (UTWorkerLimitReached(ut_id)) {
+            alert("You have completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating. Do not advance, as you will not get paid.");
+        }
+    })();
+    </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body></body>
