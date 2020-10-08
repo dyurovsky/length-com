@@ -142,5 +142,12 @@ raw_data %>%
   filter(test_part == "comment") %>% 
   select(responses) %>%
   datatable()
+
+raw_ref4_data %>%
+  filter(subid %in% ref_keep_subs$subid) %>%
+  group_by(subid) %>%
+  filter(test_part == "comment") %>% 
+  select(responses) %>%
+  datatable()
 ```
 
