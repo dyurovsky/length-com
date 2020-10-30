@@ -150,7 +150,9 @@ write_csv(workers, here("mturk/4objworkers.csv"))
 ```{r process reference data}
 #filenames <- list.files(here("mturk/production-results/"), pattern = "*.json", full.names = T)
 
-filenames <- list.files(here("mturk/4objects/production-results/"), pattern = "*.json", full.names = T)
+#filenames <- list.files(here("mturk/4objects/production-results/"), pattern = "*.json", full.names = T)
+
+filenames <- list.files(here("mturk/novel4objects/production-results/"), pattern = "*.json", full.names = T)
 
 duplicates <- read.csv(here("mturk/2objworkers.csv")) %>%
   mutate(id = as.character(id)) %>%
@@ -164,28 +166,36 @@ for(i in 1:length(ldf)){
     tmp_trials <- ldf[[i]]$answers$data
     tmp <- read.csv(textConnection(tmp_trials))
     tmp_data <- tmp %>%
-        select(c(rt, button_pressed, test_part, utt, box, 
-                 obj_1, obj_2, responses)) %>%
-        rename(left_obj = obj_1, right_obj = obj_2) %>%
+        select(c(rt, button_pressed, test_part, utt_1, utt_2, box, 
+                 obj, responses)) %>%
+        rename(left_utt = utt_1, right_utt = utt_2) %>%
         mutate(subid = as.numeric(i),
            responses = str_remove_all(responses, "[\"{Q}0:]"),
-           left_obj = str_remove(left_obj, "img/"),
-           left_obj = str_remove(left_obj, "img/"),
-           right_obj = str_remove(right_obj, "img/"),
-           right_obj = str_remove(right_obj, "img"),
-           selected_obj = if_else(test_part == "obj_selection", 
-                      ifelse(button_pressed == "1", right_obj, left_obj), ""),
-           accuracy = if_else(test_part == "obj_selection",
-                              if_else(
-                                  selected_obj == "simple.png" & utt == "complex_utt" |
-                                  selected_obj == "complex.png" & utt == "simple_utt", 
-                                 1, 0), 0)
+           obj = str_remove(obj, "img/"),
+           left_utt = as.character(left_utt),
+           right_utt = as.character(right_utt),
+           #left_obj = str_remove(left_obj, "img/"),
+           #right_obj = str_remove(right_obj, "img/"),
+           selected_utt = if_else(test_part == "obj_selection", 
+                     ifelse(button_pressed == "1", right_utt, left_utt), "")
            )
-      jsdata <- rbind(jsdata, tmp_data)
+      new_data <- tmp_data %>%
+        mutate(obj = if_else(test_part == "obj_selection", 
+                     tmp_data$obj %>% replace(1,
+                                      ifelse(tmp_data$obj[2] == "complex.png",
+                                             "simplenovel.png","complex.png")), ""),
+               accuracy = if_else(test_part == "obj_selection",
+                          if_else(
+                               selected_utt == "complex_utt" & obj == "simplenovel.png" |
+                                selected_utt == "simple_utt" & obj == "complex.png", 
+                                1, 0), 0))
+      jsdata <- rbind(jsdata, new_data)
     #}
   }
 
 #write_csv(jsdata, here("data/2obj_data.csv"))
-write_csv(jsdata, here("data/4obj_data.csv"))
+#write_csv(jsdata, here("data/4obj_data.csv"))
+
+write_csv(jsdata, here("data/novel4_data.csv"))
 
 ```

@@ -7,21 +7,11 @@
     <script src="jspsych-6.1.0/plugins/jspsych-survey-text.js"></script>
     <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
     <script src="consent/consent.js"></script>
+    <script src="mmturkey-0.6.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css"></link>
-    <script src="mmturkey-0.6.js"></script>
-    <script src="//uniqueturker.myleott.com/lib.js" type="text/javascript"></script>
-    <script type="text/javascript">
-    (function(){
-        var ut_id = "55914093f244a2136370543a702d8002";
-        if (UTWorkerLimitReached(ut_id)) {
-            alert("You have completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating. Do not advance, as you will not get paid.");
-        }
-    })();
-    </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-  <body></body>
 
     <script>
       /* get info from turk */
@@ -55,7 +45,9 @@
     var check_2 = "img/boti.png"
     var check_3 = "img/toma.png"
     images.push([check_1, check_2, check_3])
-
+    
+    
+    
     function get_utt(utt_type) {
       if (utt_type == "simple_utt") {
         return("<i>\"Bado mep.\"</i>")
@@ -63,6 +55,8 @@
         return("<i>\"Toba zem zorp midu osh gipu.\"</i>")
       }
     } 
+
+
 
     // reCAPTCHA object
     
@@ -159,7 +153,7 @@
       },
       choices: [alien_1, alien_2],
       post_trial_gap: 500,
-      data: {utt_1: utt_1, utt_2: utt_2, box: box, obj: obj_2, alien_1: alien_1, alien_2: alien_2, test_part: "obj_selection"},
+      data: {utt_1: utt_1, utt_2: utt_2, box: box, obj: obj_1, alien_1: alien_1, alien_2: alien_2, test_part: "obj_selection"},
       button_html: '<button style="border:none; background-color:#ffffff"> <img height="150px" src = %choice%> </img> </button>',
       margin_horizontal: '60px'
     }
@@ -235,5 +229,5 @@
    }
  });
     </script>
-  
+
 </html>
