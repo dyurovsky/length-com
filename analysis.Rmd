@@ -32,6 +32,10 @@ raw_ref_data <- read.csv(here("data/2obj_data.csv")) %>%
 raw_ref4_data <- read.csv(here("data/4obj_data.csv")) %>%
   filter(test_part == "obj_selection" | test_part == "comment") %>%
   mutate(accuracy = as.numeric(accuracy))
+
+raw_novel4_data <- read.csv(here("data/novel4_data.csv")) %>%
+  filter(test_part == "obj_selection" | test_part == "comment") %>%
+  mutate(accuracy = as.numeric(accuracy))
 ```
 
 ```{r subjs}
@@ -71,6 +75,13 @@ ref4_data <- raw_ref4_data %>%
   mutate(chose_complex = if_else(selected_obj == "complex.png", 1, 0)) %>%
   pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
   group_by(measure, utt) %>%
+  tidyboot_mean(value)
+
+novel4_data <- raw_novel4_data %>%
+  filter(test_part == "obj_selection") %>%
+  mutate(chose_complex = if_else(selected_utt == "complex_utt", 1, 0)) %>%
+  pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
+  group_by(measure, obj) %>%
   tidyboot_mean(value)
 ```
 
@@ -132,6 +143,17 @@ ggplot(ref4_data %>% filter(measure == "accuracy"),
                 width = 0.2, position=position_dodge(.9)) + 
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
   labs(x = "utterance type", y = "accuracy") + 
+  scale_fill_ptol()
+
+# novel 4 objects
+
+ggplot(novel4_data %>% filter(measure == "accuracy"),
+       aes(fill = obj, x = obj, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "object type", y = "accuracy") + 
   scale_fill_ptol()
 
 ```
