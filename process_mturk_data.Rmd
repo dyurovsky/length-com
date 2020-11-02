@@ -127,7 +127,7 @@ write_csv(jsdata, here("data/jspsych_data.csv"))
 
 
 ```{r unique workers}
-dfiles <- list.files(here("mturk/4objects/production-results/"), pattern = "*.json", full.names = T)
+dfiles <- list.files(here("mturk/novel4objects/production-results/"), pattern = "*.json", full.names = T)
 
 allworkers <- lapply(dfiles, fromJSON)
 workers = NULL
@@ -143,7 +143,8 @@ workers <- as.data.frame(workers) %>%
   mutate(num = 1:n())
 
 #write_csv(workers, here("mturk/2objworkers.csv"))
-write_csv(workers, here("mturk/4objworkers.csv"))
+#write_csv(workers, here("mturk/4objworkers.csv"))
+write_csv(workers, here("mturk/novel4objworkers.csv"))
 
 ```
 
