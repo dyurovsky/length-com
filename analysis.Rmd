@@ -56,23 +56,27 @@ ref_keep_subs <- raw_ref4_data %>%
   summarise(n = n_distinct(selected_obj)) %>%
   filter(n > 1)
 
+novel_check <- raw_novel4_data %>%
+  mutate(check = ifelse(test_part == "check", button_pressed, 0)) %>%
+  filter(check > 0)
+
 novel_keep_subs <- raw_novel4_data %>%
-  filter(test_part == "obj_selection" | test_part == "check") %>%
+  filter(!(subid %in% novel_check$subid)) %>%
+  filter(test_part == "obj_selection") %>%
   group_by(subid) %>%
-  mutate (check = button_pressed) %>%
   mutate(n = n_distinct(selected_utt)) %>%
-  filter(check == 0 & n > 2)
+  filter(n > 1)
 
 failed_check <- raw_new4_data %>%
   mutate(check = ifelse(test_part == "check", button_pressed, 0)) %>%
   filter(check > 0)
 
 new_keep_subs <- raw_new4_data %>%
-  filter(test_part == "obj_selection" | test_part == "check") %>%
+  filter(test_part == "obj_selection") %>%
   filter(!(subid %in% failed_check$subid)) %>%
   group_by(subid) %>%
   mutate(n = n_distinct(selected_utt)) %>%
-  filter(n > 2)
+  filter(n > 1)
 ```
 
 ```{r analysis}
