@@ -153,7 +153,9 @@ write_csv(workers, here("mturk/novel4objworkers.csv"))
 
 #filenames <- list.files(here("mturk/4objects/production-results/"), pattern = "*.json", full.names = T)
 
-filenames <- list.files(here("mturk/novel4objects/production-results/"), pattern = "*.json", full.names = T)
+#filenames <- list.files(here("mturk/novel4objects/production-results/"), pattern = "*.json", full.names = T)
+
+filenames <- list.files(here("mturk/new4objects/production-results/"), pattern = "*.json", full.names = T)
 
 duplicates <- read.csv(here("mturk/2objworkers.csv")) %>%
   mutate(id = as.character(id)) %>%
@@ -178,25 +180,30 @@ for(i in 1:length(ldf)){
            #left_obj = str_remove(left_obj, "img/"),
            #right_obj = str_remove(right_obj, "img/"),
            selected_utt = if_else(test_part == "obj_selection", 
-                     ifelse(button_pressed == "1", right_utt, left_utt), "")
-           )
-      new_data <- tmp_data %>%
-        mutate(obj = if_else(test_part == "obj_selection", 
-                     tmp_data$obj %>% replace(1,
-                                      ifelse(tmp_data$obj[2] == "complex.png",
-                                             "simplenovel.png","complex.png")), ""),
-               accuracy = if_else(test_part == "obj_selection",
+                     ifelse(button_pressed == "1", right_utt, left_utt), ""),
+           accuracy = if_else(test_part == "obj_selection",
                           if_else(
                                selected_utt == "complex_utt" & obj == "simplenovel.png" |
-                                selected_utt == "simple_utt" & obj == "complex.png", 
-                                1, 0), 0))
-      jsdata <- rbind(jsdata, new_data)
+                                selected_utt == "simple_utt" & obj == "complexnovel.png", 
+                                1, 0), 0)
+           )
+      #new_data <- tmp_data %>%
+       # mutate(obj = if_else(test_part == "obj_selection", 
+        #             tmp_data$obj %>% replace(1,
+         #                             ifelse(tmp_data$obj[2] == "complex.png",
+          #                                   "simplenovel.png","complex.png")), ""),
+           #    accuracy = if_else(test_part == "obj_selection",
+            #              if_else(
+             #                  selected_utt == "complex_utt" & obj == "simplenovel.png" |
+              #                  selected_utt == "simple_utt" & obj == "complexnovel.png", 
+               #                 1, 0), 0))
+      jsdata <- rbind(jsdata, tmp_data)
     #}
   }
 
 #write_csv(jsdata, here("data/2obj_data.csv"))
 #write_csv(jsdata, here("data/4obj_data.csv"))
-
-write_csv(jsdata, here("data/novel4_data.csv"))
+#write_csv(jsdata, here("data/novel4_data.csv"))
+write_csv(jsdata, here("data/new4_data.csv"))
 
 ```

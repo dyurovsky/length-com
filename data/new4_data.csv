@@ -1,0 +1,236 @@
+rt,button_pressed,test_part,left_utt,right_utt,box,obj,responses,subid,selected_utt,accuracy
+5760.48500003526,0,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,1,simple_utt,1
+2341.009999974631,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,1,complex_utt,1
+8522.47999998508,NA,comment,,,,,Just random.,1,,0
+3756.0900000389665,0,check,,,,,,1,,0
+1285.5499999714084,0,,,,,,,1,,0
+5933.4999999264255,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,2,simple_utt,1
+1410.7050000457093,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,2,simple_utt,0
+20143.434999976307,NA,comment,,,,,BADO MEP,2,,0
+5389.665000024252,1,check,,,,,,2,,0
+1287.9350000293925,0,,,,,,,2,,0
+21366.299999994226,0,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,complexnovel.png,,3,complex_utt,0
+10917.099999962375,1,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,simplenovel.png,,3,simple_utt,0
+61864.39999996219,NA,comment,,,,,The first said I'm taking this and you can have that one. The other one say ok no problem. ,3,,0
+4214.099999982864,0,check,,,,,,3,,0
+1491.9000000227243,0,,,,,,,3,,0
+4981.745000055525,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,4,complex_utt,0
+4544.9749999679625,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,4,complex_utt,1
+11602.134999993723,NA,comment,,,,,how many words did he say,4,,0
+2731.3800000119954,1,check,,,,,,4,,0
+1631.104999978561,0,,,,,,,4,,0
+15781.644999980927,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,5,complex_utt,0
+5580.864999908954,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,5,simple_utt,0
+8238.94999991171,NA,comment,,,,,chance,5,,0
+1502.0549998153,0,check,,,,,,5,,0
+994.2349998746067,0,,,,,,,5,,0
+15438.519999999698,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,6,complex_utt,1
+7816.624999999476,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,6,complex_utt,0
+57693.60500000039,NA,comment,,,,,I tried to match their appearance with what they lost ,6,,0
+2978.199999999575,0,check,,,,,,6,,0
+1593.8999999998487,0,,,,,,,6,,0
+27404.19999998994,0,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,complexnovel.png,,7,complex_utt,0
+2920.8999999973457,0,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,simplenovel.png,,7,complex_utt,1
+6972.399999998743,NA,comment,,,,,Boo,7,,0
+2056.1000000016065,2,check,,,,,,7,,0
+1069.6000000025379,0,,,,,,,7,,0
+19371.849999995902,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,8,simple_utt,1
+14175.999999977648,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,8,complex_utt,1
+23886.16999995429,NA,comment,,,,,"Just guessing, could not be sure",8,,0
+1891.8099999427795,0,check,,,,,,8,,0
+1504.2949999915436,0,,,,,,,8,,0
+8374.580000061542,1,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,simplenovel.png,,9,simple_utt,0
+2629.224999807775,0,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,complexnovel.png,,9,complex_utt,0
+116074.46000003256,NA,comment,,,,,I thought bado mep might be the more common object. So I chose the alien that lost the object that was not unique. The pink object seemed more special and I thought might have a more special name.,9,,0
+3408.660000190139,0,check,,,,,,9,,0
+2291.060000192374,0,,,,,,,9,,0
+70787.99999994226,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,complexnovel.png,,10,simple_utt,1
+10520.999999949709,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,simplenovel.png,,10,simple_utt,0
+9297.999999951571,NA,comment,,,,,position,10,,0
+1815.9999998752028,0,check,,,,,,10,,0
+1118.0000000167638,0,,,,,,,10,,0
+24376.699999993434,1,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,simplenovel.png,,11,simple_utt,0
+4636.300000012852,1,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,complexnovel.png,,11,simple_utt,1
+100665.60000000754,NA,comment,,,,,"I chose the green alien, who spoke second, because he only said a couple of words, which I thought might have been \That's mine\. The orange alien, who spoke first, said a lot of words that I felt might have been something like \Oh, I think that is the thing you lost\. ",11,,0
+1851.9999999844003,0,check,,,,,,11,,0
+1027.3999999917578,0,,,,,,,11,,0
+15899.299999990035,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,12,simple_utt,0
+4774.994999985211,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,12,complex_utt,0
+35295.455000014044,NA,comment,,,,,I chose the one who only talk a little. I guess that maybe it was talking about the one item.,12,,0
+1989.4299999577925,0,check,,,,,,12,,0
+1266.4499999955297,0,,,,,,,12,,0
+14981.27500002738,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,13,complex_utt,0
+1711.9200000306591,0,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,13,simple_utt,0
+19278.014999930747,NA,comment,,,,,I thought the longer answer designated the only one that was pink,13,,0
+2442.3850000603124,0,check,,,,,,13,,0
+1121.2850000010803,0,,,,,,,13,,0
+15295.739999972284,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,14,simple_utt,0
+4035.03999998793,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,14,complex_utt,0
+80142.27499999106,NA,comment,,,,,they very easy,14,,0
+3145.6400000024587,0,check,,,,,,14,,0
+2444.050000049174,0,,,,,,,14,,0
+8561.529999999038,0,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,simplenovel.png,,15,complex_utt,1
+2010.0099999981467,1,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,complexnovel.png,,15,simple_utt,1
+5328.779999999824,NA,comment,,,,,color,15,,0
+2559.450000000652,0,check,,,,,,15,,0
+1110.065000000759,0,,,,,,,15,,0
+3670.7549998536706,1,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,complexnovel.png,,16,simple_utt,1
+1041.1700000986457,0,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,simplenovel.png,,16,complex_utt,1
+12517.470000078902,NA,comment,,,,,I felt like it correlated well more.,16,,0
+1842.9849999956787,0,check,,,,,,16,,0
+727.7200000826269,0,,,,,,,16,,0
+14723.89999999723,1,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,simplenovel.png,,17,complex_utt,1
+10202.170000004116,1,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,complexnovel.png,,17,complex_utt,0
+40216.620000006515,NA,comment,,,,,By object color,17,,0
+5006.734999995388,0,check,,,,,,17,,0
+3295.604999999341,0,,,,,,,17,,0
+5131.999999983236,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,18,simple_utt,1
+2325.0000001862645,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,18,complex_utt,1
+8420.000000158325,NA,comment,,,,,boobz,18,,0
+2276.0000000707805,0,check,,,,,,18,,0
+4023.0000000447035,0,,,,,,,18,,0
+6284.710000269115,0,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,19,simple_utt,0
+2870.6299997866154,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,19,complex_utt,0
+28625.135000795126,NA,comment,,,,,The short phrased alien i paired with the more boring object,19,,0
+2621.6549994423985,0,check,,,,,,19,,0
+1236.6150002926588,0,,,,,,,19,,0
+19974.984999978915,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,20,complex_utt,0
+8528.544999891892,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,20,simple_utt,0
+99737.20000009052,NA,comment,,,,, flippantly,20,,0
+8042.709999950603,0,check,,,,,,20,,0
+4093.635000055656,0,,,,,,,20,,0
+15213.77499983646,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,21,complex_utt,1
+3930.8349997736514,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,21,complex_utt,0
+11904.32500001043,NA,comment,,,,,bodow map,21,,0
+2104.8099999316037,0,check,,,,,,21,,0
+3143.849999876693,0,,,,,,,21,,0
+13155.559999868274,1,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,complexnovel.png,,22,simple_utt,1
+5463.544999947771,0,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,simplenovel.png,,22,complex_utt,1
+26045.020000077784,NA,comment,,,,,I figured that the pink one required fewer words to explain.,22,,0
+1564.9449999909848,0,check,,,,,,22,,0
+1249.0700001362711,0,,,,,,,22,,0
+8893.999999971129,0,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,simplenovel.png,,23,complex_utt,1
+7407.999999937601,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,complexnovel.png,,23,simple_utt,1
+27057.000000029802,NA,comment,,,,,because that color matches in the objects,23,,0
+4101.9999999552965,0,check,,,,,,23,,0
+2976.9999999552965,0,,,,,,,23,,0
+6327.599999996892,1,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,complexnovel.png,,24,simple_utt,1
+4807.999999997264,0,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,simplenovel.png,,24,complex_utt,1
+19227.500000000873,NA,comment,,,,,A longer phrase would be for the more complex and detailed color,24,,0
+2141.4000000004307,0,check,,,,,,24,,0
+821.1000000010245,0,,,,,,,24,,0
+9975.61499999938,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,25,complex_utt,0
+4347.890000000916,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,25,complex_utt,1
+29065.10999999955,NA,comment,,,,,Gut feeling. Harmony in colors with the Aliens color.,25,,0
+4358.695000002626,0,check,,,,,,25,,0
+1131.7850000014005,0,,,,,,,25,,0
+11073.000000000233,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,complexnovel.png,,26,simple_utt,1
+6279.000000002328,0,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,simplenovel.png,,26,complex_utt,1
+40699.000000000466,NA,comment,,,,,Just use my intuition  ,26,,0
+3409.999999999767,0,check,,,,,,26,,0
+2457.999999998603,0,,,,,,,26,,0
+5686,0,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,complexnovel.png,,27,complex_utt,0
+3146,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,simplenovel.png,,27,simple_utt,0
+24748,NA,comment,,,,,Because it was told to me that two aliens looked in the box.,27,,0
+2309.0000000000146,0,check,,,,,,27,,0
+1695.9999999999854,0,,,,,,,27,,0
+2597.7899999998044,1,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,complexnovel.png,,28,complex_utt,0
+743.8850000035018,0,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,simplenovel.png,,28,simple_utt,0
+5745.589999976801,NA,comment,,,,,Intuition,28,,0
+1644.430000014836,0,check,,,,,,28,,0
+1198.8400000263937,0,,,,,,,28,,0
+3061.359999999695,1,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,complexnovel.png,,29,complex_utt,0
+4060.764999998384,1,obj_selection,simple_utt,complex_utt,img/novelbox4c.png,simplenovel.png,,29,complex_utt,1
+9318.05499999976,NA,comment,,,,,punda,29,,0
+3919.789999999921,0,check,,,,,,29,,0
+1704.780000000028,0,,,,,,,29,,0
+8592.000000000553,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,30,complex_utt,0
+8815.999999998894,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,30,simple_utt,0
+35747.99999999959,NA,comment,,,,,it belongs to aliens,30,,0
+4049.0000000027067,0,check,,,,,,30,,0
+2362.9999999975553,0,,,,,,,30,,0
+9846.000000001368,1,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,complexnovel.png,,31,simple_utt,1
+1500,1,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,simplenovel.png,,31,simple_utt,0
+11826.000000000931,NA,comment,,,,,BADO MEP,31,,0
+2789.0000000006694,1,check,,,,,,31,,0
+750,0,,,,,,,31,,0
+10189.000000013039,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,32,complex_utt,0
+2057.9999999608845,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,32,simple_utt,0
+14253.99999995716,NA,comment,,,,,THAT THIS THE ALIENS,32,,0
+2815.0000001769513,0,check,,,,,,32,,0
+1942.9999999701977,0,,,,,,,32,,0
+3817.2199999680743,0,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,simplenovel.png,,33,complex_utt,1
+1600.9049999993294,1,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,complexnovel.png,,33,simple_utt,1
+19365.97000004258,NA,comment,,,,,I just went with my gut.,33,,0
+1581.9099999498576,0,check,,,,,,33,,0
+1111.7050000466406,0,,,,,,,33,,0
+28869.000000180677,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,34,complex_utt,1
+4692.999999970198,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,34,complex_utt,0
+10777.999999932945,NA,comment,,,,,good,34,,0
+2946.999999927357,2,check,,,,,,34,,0
+1110.0000001024455,0,,,,,,,34,,0
+16290.19999999582,0,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,simplenovel.png,,35,complex_utt,1
+5614.099999998871,0,obj_selection,complex_utt,simple_utt,img/novelbox4b.png,complexnovel.png,,35,complex_utt,0
+42249.10000000091,NA,comment,,,,,He had the most to say which lead me to believe there his.,35,,0
+6241.3999999989755,0,check,,,,,,35,,0
+1631.600000000617,0,,,,,,,35,,0
+3793.1899999966845,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,36,complex_utt,0
+3603.9699999964796,0,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,36,simple_utt,0
+52415.41999997571,NA,comment,,,,,It felt like the aliens with the longer answer had to use more words to be specific about an item that was different than the others.,36,,0
+2485.979999997653,0,check,,,,,,36,,0
+1707.5799999875017,0,,,,,,,36,,0
+4906.32499998901,0,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,37,simple_utt,0
+3897.2549999598414,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,37,complex_utt,0
+13074.105000006966,NA,comment,,,,,based on how similar color the object was to the alien,37,,0
+2461.665000009816,0,check,,,,,,37,,0
+1330.5950000067241,0,,,,,,,37,,0
+18074.065000007977,0,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,simplenovel.png,,38,complex_utt,1
+6815.595000007306,1,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,complexnovel.png,,38,simple_utt,1
+62246.5349999984,NA,comment,,,,,The first alien to speak would state which item was found in the group.  The other would disagree with the statement.,38,,0
+11629.350000002887,0,check,,,,,,38,,0
+2064.3549999949755,0,,,,,,,38,,0
+8281.474999850616,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,39,simple_utt,1
+3282.0850000716746,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,39,complex_utt,1
+47612.02500015497,NA,comment,,,,,Because the pick color one matched one of the aliens and the blue seemed to go with the orange alien,39,,0
+3036.2050000112504,0,check,,,,,,39,,0
+2188.014999963343,0,,,,,,,39,,0
+22982.00000007637,0,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,simplenovel.png,,40,simple_utt,0
+3488.999999826774,1,obj_selection,simple_utt,complex_utt,img/novelbox4b.png,complexnovel.png,,40,complex_utt,0
+15047.999999951571,NA,comment,,,,,By their speech,40,,0
+3270.9999999497086,0,check,,,,,,40,,0
+1312.0000001508743,0,,,,,,,40,,0
+4593.9999999827705,1,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,simplenovel.png,,41,complex_utt,1
+4496.000000013737,0,obj_selection,simple_utt,complex_utt,img/novelbox4d.png,complexnovel.png,,41,simple_utt,1
+24754.000000015367,NA,comment,,,,,alien says this way choose,41,,0
+4017.0000000216532,0,check,,,,,,41,,0
+1940.999999991618,0,,,,,,,41,,0
+21787.705000009737,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,42,complex_utt,1
+12979.445000004489,0,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,42,simple_utt,1
+34335.210000004736,NA,comment,,,,,I choose colors of each aliens,42,,0
+6834.399999992456,0,check,,,,,,42,,0
+1958.6399999971036,0,,,,,,,42,,0
+16527.98499999335,1,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,complexnovel.png,,43,simple_utt,1
+14773.750000022119,0,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,simplenovel.png,,43,complex_utt,1
+144883.49999999627,NA,comment,,,,,"one with lengthy words must have said he lost one of the blue object, then ask what did the other alien lose, and the other alien said two words, which must mean the object was not much or a singular object",43,,0
+2043.2649999856949,0,check,,,,,,43,,0
+1286.324999993667,0,,,,,,,43,,0
+20950.00000001164,0,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,complexnovel.png,,44,simple_utt,1
+2604.6999999671243,1,obj_selection,simple_utt,complex_utt,img/novelbox4a.png,simplenovel.png,,44,complex_utt,1
+43945.699999982025,NA,comment,,,,,I felt that the alien whose utterance was shorter was missing the pink object.,44,,0
+2071.200000005774,0,check,,,,,,44,,0
+932.2999999858439,0,,,,,,,44,,0
+4787.420000182465,1,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,complexnovel.png,,45,simple_utt,1
+5060.9999999869615,0,obj_selection,complex_utt,simple_utt,img/novelbox4d.png,simplenovel.png,,45,complex_utt,1
+8588.62500009127,NA,comment,,,,,GREEN,45,,0
+2098.8749999087304,0,check,,,,,,45,,0
+1480.1150001585484,0,,,,,,,45,,0
+23841.06000000611,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,complexnovel.png,,46,simple_utt,1
+4390.585000044666,1,obj_selection,complex_utt,simple_utt,img/novelbox4c.png,simplenovel.png,,46,simple_utt,0
+24388.699999894015,NA,comment,,,,,my thought is blue aliens loose,46,,0
+7734.274999937043,0,check,,,,,,46,,0
+2131.980000063777,0,,,,,,,46,,0
+2882.5099999958184,1,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,complexnovel.png,,47,simple_utt,1
+61086.30499999708,0,obj_selection,complex_utt,simple_utt,img/novelbox4a.png,simplenovel.png,,47,complex_utt,1
+13011.489999997139,NA,comment,,,,,GOOD IMAGE,47,,0
+8264.914999999746,1,check,,,,,,47,,0
+3400.085000001127,0,,,,,,,47,,0
