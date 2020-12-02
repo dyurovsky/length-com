@@ -76,16 +76,18 @@ novel_keep_subs <- raw_novel4_data %>%
   mutate(n = n_distinct(selected_utt)) %>%
   filter(n > 1)
 
-failed_check <- raw_ref3_data %>%
+failed_check <- #raw_new4_2_data %>% 
+  raw_ref3_data %>%
   mutate(check = ifelse(test_part == "check", button_pressed, 0)) %>%
   filter(check > 0)
 
-new_keep_subs <- raw_ref3_data %>%
+new_keep_subs <- #raw_new4_2_data %>% 
+  raw_ref3_data %>%
   filter(test_part == "obj_selection") %>%
-  filter(!(subid %in% failed_check$subid)) %>%
-  group_by(subid) %>%
-  mutate(n = n_distinct(selected_utt)) %>%
-  filter(n > 1)
+  filter(!(subid %in% failed_check$subid)) #%>%
+  #group_by(subid) %>%
+  #mutate(n = n_distinct(button_pressed)) %>%
+  #filter(n > 1)
 ```
 
 ```{r analysis}
@@ -237,6 +239,15 @@ ggplot(new4_data %>% filter(measure == "chose_complex"),
 
 #3 objects
 ggplot(ref3_data %>% filter(measure == "accuracy"),
+       aes(fill = utt, x = utt, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "object type", y = "prop. choosing complex") + 
+  scale_fill_ptol()
+
+ggplot(ref3_data %>% filter(measure == "chose_complex"),
        aes(fill = utt, x = utt, y = empirical_stat)) +
   geom_bar(position="dodge", stat="identity") +
   geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
