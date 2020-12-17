@@ -1,0 +1,251 @@
+rt,button_pressed,test_part,utt_1,utt_2,cue,trial_index,responses,subid,selected_utt,accuracy
+12840.134999947622,0,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,1,complex_utt,1
+4251.785000087693,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,1,simple_utt,1
+26957.540000090376,NA,comment,,,,10,I think the things was lost by that aliens,1,,0
+14322.770000202581,1,check,,,,11,,1,,1
+2149.0650000050664,0,,,,,12,,1,,0
+157399.99999996508,0,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,2,complex_utt,1
+1899.0000000339933,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,2,simple_utt,1
+11532.00000000652,NA,comment,,,,10,TOBO,2,,0
+3160.9999999636784,2,check,,,,11,,2,,0
+2233.9999999967404,0,,,,,12,,2,,0
+15542,1,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,3,simple_utt,0
+2213,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,3,complex_utt,0
+34881,NA,comment,,,,10,I chose the aliens that I did by how long the words are and I thought about the simplicity of them.,3,,0
+3095,1,check,,,,11,,3,,1
+1727,0,,,,,12,,3,,0
+10656.309999991208,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,4,simple_utt,0
+5009.479999978794,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,4,simple_utt,1
+23098.404999997,NA,comment,,,,10,Bado mep,4,,0
+6395.655000000261,1,check,,,,11,,4,,1
+7465.425000002142,0,,,,,12,,4,,0
+29329.105000011623,1,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,5,simple_utt,0
+16961.525000049733,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,5,complex_utt,0
+66559.81000000611,NA,comment,,,,10,"the orange alien spoke a shorter phrase, and yellow bottle is shorter than purple umbrella, which the alien with the longer sentence chose.",5,,0
+6584.909999975935,1,check,,,,11,,5,,1
+925.3950000274926,0,,,,,12,,5,,0
+11663.449999992736,1,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,6,complex_utt,1
+4215.3549999929965,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,6,simple_utt,1
+25540.775000001304,NA,comment,,,,10,Like,6,,0
+5746.4750000071945,0,check,,,,11,,6,,0
+2704.4049999967683,0,,,,,12,,6,,0
+10380.364999997255,0,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,7,complex_utt,1
+1518.049999998766,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,7,simple_utt,1
+49774.469999996654,NA,comment,,,,10,"It was a guess honestly; while I take test/surveys/task/hits seriously, I wasn't expecting to know which one said what. ",7,,0
+88281.72999999515,1,check,,,,11,,7,,1
+1562.0600000038394,0,,,,,12,,7,,0
+4717.974999977741,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,8,simple_utt,0
+2274.5299999951385,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,8,simple_utt,1
+37346.870000008494,NA,comment,,,,10,"It doesn't described it with the words , the second alien described everything",8,,0
+5881.460000004154,1,check,,,,11,,8,,1
+1008.9900000020862,0,,,,,12,,8,,0
+17949.384999927133,1,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,9,simple_utt,0
+2042.684999993071,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,9,simple_utt,1
+21183.68500005454,NA,comment,,,,10,THIS CORRECT APTED FOR THIS PROPERTY ,9,,0
+7101.354999933392,1,check,,,,11,,9,,1
+1868.8799999654293,0,,,,,12,,9,,0
+1819.3949999986216,1,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,10,complex_utt,1
+1991.024999995716,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,10,simple_utt,1
+2630.849999986822,NA,comment,,,,10,th,10,,0
+2348.549999995157,2,check,,,,11,,10,,0
+982.7649999933783,0,,,,,12,,10,,0
+7667.985000000044,0,obj_selection,complex_utt,simple_utt,bottle2_test.png,8,,11,complex_utt,1
+1099.7100000004139,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,11,simple_utt,1
+30381.75000000046,NA,comment,,,,10,"I felt like there were more descriptors for the bottle, so it would require more words",11,,0
+2848.024999999325,1,check,,,,11,,11,,1
+964.5350000000763,0,,,,,12,,11,,0
+8395.000000018626,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,12,simple_utt,0
+1635.9999999403954,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,12,complex_utt,0
+16614.000000059605,NA,comment,,,,10,blue,12,,0
+1796.000000089407,1,check,,,,11,,12,,1
+1459.999999962747,0,,,,,12,,12,,0
+12594.825000000128,1,obj_selection,complex_utt,simple_utt,bottle2_test.png,8,,13,simple_utt,0
+1841.750000001397,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,13,complex_utt,0
+14912.804999999935,NA,comment,,,,10,I thought that was correct,13,,0
+3967.9199999991106,1,check,,,,11,,13,,1
+1123.4600000006903,0,,,,,12,,13,,0
+3557.9950000001118,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,14,simple_utt,0
+1295.8999999999069,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,14,complex_utt,0
+14814.32499999972,NA,comment,,,,10,"I guessed, none of it makes sense",14,,0
+3092.630000000121,2,check,,,,11,,14,,0
+1028.4100000003818,0,,,,,12,,14,,0
+6723.1149999424815,1,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,15,complex_utt,1
+1976.395000005141,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,15,simple_utt,1
+21476.464999839664,NA,comment,,,,10,Based on the sounding of the words,15,,0
+5473.98000000976,1,check,,,,11,,15,,1
+921.695000026375,0,,,,,12,,15,,0
+9218,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,16,simple_utt,0
+2352,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,16,complex_utt,0
+36151,NA,comment,,,,10,I feel the words that were spoken by the aliens matched the objects. ,16,,0
+6255,1,check,,,,11,,16,,1
+1161,0,,,,,12,,16,,0
+7079.4500000047265,0,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,17,complex_utt,1
+1526.224999994156,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,17,simple_utt,1
+26636.389999999665,NA,comment,,,,10,"I just went with my gut instinct, the words the alien used reminded me of a water bottle.",17,,0
+2178.974999987986,1,check,,,,11,,17,,1
+1512.5549999938812,0,,,,,12,,17,,0
+9664.72000000067,0,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,18,complex_utt,1
+1286.4349999872502,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,18,simple_utt,1
+35457.22999999998,NA,comment,,,,10,"the left one said more, implying they had to be specific to distinguish their item from similar items.",18,,0
+2804.405000002589,1,check,,,,11,,18,,1
+1334.5200000039767,0,,,,,12,,18,,0
+5406.999999999243,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,19,simple_utt,0
+5188.000000000087,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,19,complex_utt,0
+43954.99999999991,NA,comment,,,,10,i feel orange aliean hided the thinings,19,,0
+6099.0000000001455,1,check,,,,11,,19,,1
+2088.999999999942,0,,,,,12,,19,,0
+5954.2249999940395,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,20,simple_utt,0
+2214.7750000003725,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,20,complex_utt,0
+13036.644999869168,NA,comment,,,,10,just a guess,20,,0
+4429.169999901205,1,check,,,,11,,20,,1
+1390.404999954626,0,,,,,12,,20,,0
+23263.95500008948,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,21,simple_utt,0
+17311.645000008866,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,21,complex_utt,0
+34671.48999986239,NA,comment,,,,10,because I thought it was the right one,21,,0
+8269.594999961555,1,check,,,,11,,21,,1
+2658.6550001520663,0,,,,,12,,21,,0
+6315,1,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,22,complex_utt,1
+1390,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,22,simple_utt,1
+20007,NA,comment,,,,10,I honestly do not know.,22,,0
+8862,1,check,,,,11,,22,,1
+1488,0,,,,,12,,22,,0
+16646.945000160486,1,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,23,simple_utt,0
+1706.9649999029934,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,23,complex_utt,0
+19560.589999891818,NA,comment,,,,10,the longer phrase makes more sense for the longer word \umbrella\,23,,0
+4475.25000013411,0,check,,,,11,,23,,0
+1597.2250001505017,0,,,,,12,,23,,0
+12414.999999920838,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,24,simple_utt,0
+1942.0000000391155,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,24,complex_utt,0
+15095.999999903142,NA,comment,,,,10,i know it,24,,0
+6934.000000008382,1,check,,,,11,,24,,1
+2908.999999985099,0,,,,,12,,24,,0
+19028.80999998888,0,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,25,complex_utt,1
+3849.6549999690615,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,25,simple_utt,1
+29579.314999980852,NA,comment,,,,10,I was thought those were the objects assigned to them that they had lost.,25,,0
+6429.230000008829,1,check,,,,11,,25,,1
+2099.210000014864,0,,,,,12,,25,,0
+4868.685000110418,0,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,26,complex_utt,1
+2657.609999878332,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,26,simple_utt,1
+15683.590000029653,NA,comment,,,,10,no,26,,0
+20885.280000045896,1,check,,,,11,,26,,1
+1318.944999948144,0,,,,,12,,26,,0
+10848.239999999816,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,27,simple_utt,0
+1631.2049999999144,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,27,complex_utt,0
+25255.789999999935,NA,comment,,,,10,i think that they said the things like that,27,,0
+4957.345000000045,0,check,,,,11,,27,,0
+1466.1250000001455,0,,,,,12,,27,,0
+11943.604999993113,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,28,simple_utt,0
+1904.9149999918882,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,28,complex_utt,0
+38310.270000001765,NA,comment,,,,10,"The purple alien said a lot more than the orange one, so I thought it was describing the properties of the umbrella.",28,,0
+4169.129999994766,1,check,,,,11,,28,,1
+2311.329999996815,0,,,,,12,,28,,0
+18198.51500002551,1,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,29,simple_utt,0
+7529.0099999983795,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,29,simple_utt,1
+10734.895000001416,NA,comment,,,,10,there were 2 words and two items ,29,,0
+3133.250000013504,1,check,,,,11,,29,,1
+1326.8650000100024,0,,,,,12,,29,,0
+7421.719999998459,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,30,simple_utt,0
+974.0699999965727,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,30,complex_utt,0
+20287.280000004102,NA,comment,,,,10,I feel like the water bottle would be the simpler of the two phrases.,30,,0
+4582.51000000746,1,check,,,,11,,30,,1
+1255.3399999887915,0,,,,,12,,30,,0
+1254.4550000002346,1,obj_selection,complex_utt,simple_utt,bottle2_test.png,8,,31,simple_utt,0
+837.6299999999901,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,31,complex_utt,0
+10603.99999999936,NA,comment,,,,10,LAST,31,,0
+4792.869999999311,1,check,,,,11,,31,,1
+1480.7550000004994,0,,,,,12,,31,,0
+6080.999999999985,1,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,32,simple_utt,0
+1221.0000000000073,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,32,complex_utt,0
+8843.999999999993,NA,comment,,,,10,i like,32,,0
+4117.000000000015,0,check,,,,11,,32,,0
+1494,0,,,,,12,,32,,0
+4819.944999995641,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,33,simple_utt,0
+1392.0400000642985,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,33,complex_utt,0
+25107.199999969453,NA,comment,,,,10,I feel like a water bottle will need less words to describe it compared to an umbrella,33,,0
+6288.300000014715,1,check,,,,11,,33,,1
+1086.8949999567121,0,,,,,12,,33,,0
+10917.300000000978,0,obj_selection,complex_utt,simple_utt,bottle2_test.png,8,,34,complex_utt,1
+1495.4999999899883,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,34,simple_utt,1
+64642.20000000205,NA,comment,,,,10,I actually followed my intuition. ,34,,0
+5174.899999998161,1,check,,,,11,,34,,1
+1264.999999999418,0,,,,,12,,34,,0
+8632.334999972954,1,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,35,complex_utt,1
+1879.9449999351054,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,35,simple_utt,1
+6268.595000030473,NA,comment,,,,10,Just a guess,35,,0
+2470.3450000379235,1,check,,,,11,,35,,1
+1177.909999853,0,,,,,12,,35,,0
+9323.689999990165,1,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,36,simple_utt,0
+2247.6800000295043,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,36,complex_utt,0
+109066.3750001695,NA,comment,,,,10,"Two reasons \Bado\ sounds like bottle and \bado mep\ is shorter than the other name, which just seemed like a better fit for a smaller object.  ",36,,0
+8442.374999867752,1,check,,,,11,,36,,1
+1875.6750000175089,0,,,,,12,,36,,0
+5150,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,37,simple_utt,0
+1667,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,37,complex_utt,0
+27848,NA,comment,,,,10,"I felt like \bado mep\ sounded kind of like \bottle\ when you say it out loud, and one of the images looked like a bottle",37,,0
+2829.0000000000146,1,check,,,,11,,37,,1
+1378,0,,,,,12,,37,,0
+14816.124999999374,1,obj_selection,complex_utt,simple_utt,bottle1_test.png,8,,38,simple_utt,0
+6156.590000000506,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,38,complex_utt,0
+26869.534999999814,NA,comment,,,,10,"Not sure, I just guessed.",38,,0
+3743.4250000005704,1,check,,,,11,,38,,1
+1665.8650000008492,0,,,,,12,,38,,0
+7582.014999999956,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,39,simple_utt,0
+1521.5950000056182,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,39,complex_utt,0
+30111.069999999017,NA,comment,,,,10,bado mep sounded like it could be bottle,39,,0
+3618.80000000383,1,check,,,,11,,39,,1
+1524.4600000005448,0,,,,,12,,39,,0
+9309.144999999262,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,40,simple_utt,0
+1487.199999999575,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,40,complex_utt,0
+19810.60499999876,NA,comment,,,,10,using terms,40,,0
+4332.800000000134,2,check,,,,11,,40,,0
+1551.9049999984418,0,,,,,12,,40,,0
+28113.899999996647,1,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,41,complex_utt,1
+3005.799999984447,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,41,simple_utt,1
+62228.199999954086,NA,comment,,,,10,I thought the alien with the fewest words described the umbrella as there was only one where the alien with more words had to describe which one of three bottles was his bottle,41,,0
+1777.0000000018626,1,check,,,,11,,41,,1
+5046.60000000149,0,,,,,12,,41,,0
+9460.989999992307,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,42,simple_utt,0
+1242.9049999918789,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,42,complex_utt,0
+29150.34499997273,NA,comment,,,,10,I just had to make a guess cuz I really didn't know.,42,,0
+2480.940000008559,1,check,,,,11,,42,,1
+1715.219999983674,0,,,,,12,,42,,0
+86616.99999999996,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,43,simple_utt,0
+1672.000000000029,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,43,complex_utt,0
+28740.00000000003,NA,comment,,,,10,They lost their objects,43,,0
+1497.0000000000873,1,check,,,,11,,43,,1
+1917.9999999999127,0,,,,,12,,43,,0
+184888.99999996647,1,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,44,complex_utt,1
+3135.000000009313,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,44,simple_utt,1
+27959.999999962747,NA,comment,,,,10,BLUE,44,,0
+14910.000000032596,2,check,,,,11,,44,,0
+3353.000000002794,0,,,,,12,,44,,0
+11060.064999997849,1,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,45,simple_utt,0
+29531.8949999928,0,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,45,complex_utt,0
+28158.259999996517,NA,comment,,,,10,based on their shapes,45,,0
+8986.774999997579,1,check,,,,11,,45,,1
+2497.3900000040885,0,,,,,12,,45,,0
+37754.99999988824,0,obj_selection,simple_utt,complex_utt,bottle3_test.png,8,,46,simple_utt,0
+7253.999999957159,0,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,46,simple_utt,1
+32822.00000016019,NA,comment,,,,10,I think the aliens lost,46,,0
+9582.999999867752,1,check,,,,11,,46,,1
+1628.9999999571592,0,,,,,12,,46,,0
+35436.99999997625,0,obj_selection,simple_utt,complex_utt,bottle1_test.png,8,,47,simple_utt,0
+5965.195000055246,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,47,complex_utt,0
+11290.1299999794,NA,comment,,,,10,Need,47,,0
+8139.790000044741,0,check,,,,11,,47,,0
+2536.054999975022,0,,,,,12,,47,,0
+68988.71500000043,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,48,simple_utt,0
+2204.2849999997998,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,48,complex_utt,0
+90474.48499999972,NA,comment,,,,10,"Because ,I guess they will chose like this.",48,,0
+6422.569999999716,1,check,,,,11,,48,,1
+2360.7249999999767,0,,,,,12,,48,,0
+15023.704999999609,0,obj_selection,complex_utt,simple_utt,bottle3_test.png,8,,49,complex_utt,1
+1994.6950000012293,1,obj_selection,complex_utt,simple_utt,umbrella_test.png,9,,49,simple_utt,1
+44064.96000000334,NA,comment,,,,10,The color of the object matching that of the alien,49,,0
+10103.274999994028,1,check,,,,11,,49,,1
+2620.854999993753,0,,,,,12,,49,,0
+3140.3300000238232,0,obj_selection,simple_utt,complex_utt,bottle2_test.png,8,,50,simple_utt,0
+898.1349999667145,1,obj_selection,simple_utt,complex_utt,umbrella_test.png,9,,50,complex_utt,0
+25535.544999991544,NA,comment,,,,10,"i felt like the umbrella was the odd thing out, so it would take more words to describe what it was, so the longer phrase alien matched it",50,,0
+2256.974999967497,1,check,,,,11,,50,,1
+873.3099999953993,0,,,,,12,,50,,0

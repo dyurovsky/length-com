@@ -149,11 +149,8 @@ write_csv(workers, here("mturk/new4workers.csv"))
 ```
 
 ```{r process reference data}
-#filenames <- list.files(here("mturk/production-results/"), pattern = "*.json", full.names = T)
-#filenames <- list.files(here("mturk/4objects/production-results/"), pattern = "*.json", full.names = T)
-#filenames <- list.files(here("mturk/novel4objects/production-results/"), pattern = "*.json", full.names = T)
-#filenames <- list.files(here("mturk/new4objects/production-results/"), pattern = "*.json", full.names = T)
-filenames <- list.files(here("mturk/novel3objects/production-results/"), pattern = "*.json", full.names = T)
+
+filenames <- list.files(here("mturk/familiar4objects/production-results-anon/"), pattern = "*.json", full.names = T)
 
 duplicates <- read.csv(here("mturk/2objworkers.csv")) %>%
   mutate(id = as.character(id)) %>%
@@ -167,24 +164,22 @@ for(i in 1:length(ldf)){
     tmp_trials <- ldf[[i]]$answers$data
     tmp <- read.csv(textConnection(tmp_trials))
     tmp_data <- tmp %>%
-        select(c(rt, button_pressed, test_part, utt, 
-                 obj_1, obj_2, obj_3, responses)) %>%
-        #rename(left_utt = utt_1, right_utt = utt_2) %>%
+        select(c(rt, button_pressed, test_part, utt_1, utt_2, 
+                 cue, trial_index, responses)) %>%
         mutate(subid = as.numeric(i),
            responses = str_remove_all(responses, "[\"{Q}0:]"),
-           obj_1 = str_remove(obj_1, "img/"),
-           obj_2 = str_remove(obj_2, "img/"),
-           obj_3 = str_remove(obj_3, "img/"),
-           utt = as.character(utt),
-           selected_obj = if_else(test_part == "obj_selection", 
-                     ifelse(button_pressed == "0", obj_1,
-                            ifelse(button_pressed == "1", obj_2, obj_3)), ""),
+           cue = str_remove(cue, "img/"),
+           utt_1 = as.character(utt_1),
+           utt_2 = as.character(utt_2),
+           selected_utt = if_else(test_part == "obj_selection", 
+                     ifelse(button_pressed == "0", utt_1, utt_2), ""),
            accuracy = if_else(test_part == "obj_selection",
                           if_else(
-                                utt == "complex_utt" & selected_obj == "simplenovel.png" |
-                                utt == "complex_utt" & selected_obj == "simplenovel2.png" |
-                                utt == "simple_utt" & selected_obj == "complexnovel2.png", 
-                                1, 0), 0)
+                                selected_utt == "complex_utt" & trial_index == 8 |
+                                selected_utt == "simple_utt" & trial_index == 9, 
+                                1, 0), 
+                          if_else(test_part == "check",
+                                  if_else(button_pressed == "1", 1, 0), 0))
            )
       #new_data <- tmp_data %>%
        # mutate(obj = if_else(test_part == "obj_selection", 
@@ -200,9 +195,6 @@ for(i in 1:length(ldf)){
     #}
   }
 
-#write_csv(jsdata, here("data/2obj_data.csv"))
-#write_csv(jsdata, here("data/4obj_data.csv"))
-#write_csv(jsdata, here("data/novel4_data.csv"))
-write_csv(jsdata, here("data/novel3_data.csv"))
+write_csv(jsdata, here("data/familiar4_data.csv"))
 
 ```

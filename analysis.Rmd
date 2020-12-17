@@ -50,6 +50,10 @@ raw_new4_2_data <- read.csv(here("data/new4_2_data.csv")) %>%
 raw_ref3_data <- read.csv(here("data/novel3_data.csv")) %>%
   filter(test_part == "obj_selection" | test_part == "comment" | test_part == "check") %>%
   mutate(accuracy = as.numeric(accuracy))
+
+raw_familiar4_data <- read.csv(here("data/familiar4_data.csv")) %>%
+  filter(test_part == "obj_selection" | test_part == "comment" | test_part == "check") %>%
+  mutate(accuracy = as.numeric(accuracy))
 ```
 
 ```{r subjs}
@@ -76,10 +80,8 @@ novel_keep_subs <- raw_novel4_data %>%
   mutate(n = n_distinct(selected_utt)) %>%
   filter(n > 1)
 
-failed_check <- #raw_new4_2_data %>% 
-  raw_ref3_data %>%
-  mutate(check = ifelse(test_part == "check", button_pressed, 0)) %>%
-  filter(check > 0)
+passed_check <-  raw_familiar4_data %>%
+  filter(test_part == "check" & accuracy == 1)
 
 new_keep_subs <- #raw_new4_2_data %>% 
   raw_ref3_data %>%
@@ -134,6 +136,14 @@ ref3_data <- raw_ref3_data %>%
   mutate(chose_complex = if_else(selected_obj == "complexnovel2.png", 1, 0)) %>%
   pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
   group_by(measure, utt) %>%
+  tidyboot_mean(value)
+
+familiar4_data <- raw_familiar4_data %>%
+  filter(subid %in% passed_check$subid, test_part == "obj_selection") %>%
+  mutate(chose_complex = if_else(selected_utt == "complex_utt", 1, 0),
+         cue = if_else(cue == "umbrella_test.png", "umbrella", "bottle")) %>%
+  pivot_longer(cols = c(accuracy, rt, chose_complex), names_to = "measure") %>%
+  group_by(measure, cue) %>%
   tidyboot_mean(value)
 ```
 
@@ -254,6 +264,25 @@ ggplot(ref3_data %>% filter(measure == "chose_complex"),
                 width = 0.2, position=position_dodge(.9)) + 
   geom_hline(aes(yintercept = .5), linetype = "dashed") + 
   labs(x = "object type", y = "prop. choosing complex") + 
+  scale_fill_ptol()
+
+# familiar objects
+ggplot(familiar4_data %>% filter(measure == "chose_complex"),
+       aes(fill = cue, x = cue, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "object type", y = "prop. choosing complex") + 
+  scale_fill_ptol()
+
+ggplot(familiar4_data %>% filter(measure == "accuracy"),
+       aes(fill = cue, x = cue, y = empirical_stat)) +
+  geom_bar(position="dodge", stat="identity") +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                width = 0.2, position=position_dodge(.9)) + 
+  geom_hline(aes(yintercept = .5), linetype = "dashed") + 
+  labs(x = "object type", y = "accuracy") + 
   scale_fill_ptol()
 
 ```
