@@ -56,9 +56,9 @@
 
     function get_utt(utt_type) {
       if (utt_type == "simple_utt") {
-        return("<i>\"I lost the toba.\"</i>")
+        return("<i>\"Bidaku zem toba.\"</i>")
       } else {
-        return("<i>\"I lost the modi zem.\"</i>")
+        return("<i>\"Bidaku zem modi osh gipu.\"</i>")
       }
     }
 
@@ -179,14 +179,14 @@
       type: 'html-button-response',
       stimulus: function(){ return "<p>Which alien lost this object?</p>" +
         "<div style='width: 700px; text-align: center'>"+
-        "<div style='float: center;'><img src = '" + umbrella + "' height = '300'></img></div><br>"+
+        "<div style='float: center;'><img src = '" + beanie + "' height = '300'></img></div><br>"+
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_1) + "</p></div>" +
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_2) + "</p></div><br>" +
         "</div>";
       },
       choices: [alien_1, alien_2],
       post_trial_gap: 500,
-      data: {utt_1: utt_1, utt_2: utt_2, cue: umbrella, alien_1: alien_1, alien_2: alien_2, test_part: "obj_selection"},
+      data: {utt_1: utt_1, utt_2: utt_2, cue: beanie, alien_1: alien_1, alien_2: alien_2, test_part: "obj_selection"},
       button_html: '<button style="border:none; background-color:#ffffff; float:center"><img height="150px" src = %choice%> </img> </button>',
       margin_horizontal: '60px'
     }
