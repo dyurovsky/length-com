@@ -2,14 +2,14 @@
 <html>
   <head>
     <title>Alien lost and found game</title>
-    <script src="jspsych-6.1.0/jspsych.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-html-button-response.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-survey-text.js"></script>
-    <script src="jspsych-6.1.0/plugins/jspsych-external-html.js"></script>
+    <script src="jspsych-6.2.0/jspsych.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-html-button-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-survey-text.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-external-html.js"></script>
     <script src="consent/consent.js"></script>
     <script src="mmturkey-0.6.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css"></link>
+    <link rel="stylesheet" href="jspsych-6.2.0/css/jspsych.css"></link>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
@@ -23,7 +23,7 @@
     // images
     var images = [];
 
-    //var box = jsPsych.randomization.sampleWithoutReplacement(["img/novelbox4a.png", "img/novelbox4b.png", "img/novelbox4c.png", 
+    //var box = jsPsych.randomization.sampleWithoutReplacement(["img/novelbox4a.png", "img/novelbox4b.png", "img/novelbox4c.png",
               //"img/novelbox4d.png"], 1)
     //images.push(box)
 
@@ -42,30 +42,30 @@
 
     var beanie = "img/beanie_test.png"
     images.push(beanie)
-    
+
     var utts = jsPsych.randomization.repeat(["complex_utt", "simple_utt"], 1)
     var utt_1 = utts[0]
     var utt_2 = utts[1]
-    
+
     var check_1 = "img/bottle1.png"
     var check_2 = "img/bottle4.png"
     var check_3 = "img/bottle2.png"
     images.push([check_1, check_2, check_3])
-    
-    
-    
+
+
+
     function get_utt(utt_type) {
       if (utt_type == "simple_utt") {
         return("<i>\"I lost the toba.\"</i>")
       } else {
         return("<i>\"I lost the modi zem.\"</i>")
       }
-    } 
+    }
 
 
 
     // reCAPTCHA object
-    
+
     var recaptcha = {
       type: "external-html",
       url: "recaptcha.html",
@@ -73,7 +73,7 @@
       execute_script: true
     };
     timeline.push(recaptcha);
-  
+
 
     var consent = {
       type:'external-html',
@@ -81,8 +81,8 @@
       cont_btn: "start"
     };
     timeline.push(consent);
-    
-    
+
+
     /* define instructions trial */
     var instructions = {
       type: "html-button-response",
@@ -162,7 +162,7 @@
     var test_1 = {
       type: 'html-button-response',
       stimulus: function(){ return "<p>Which alien lost this object?</p>" +
-        "<div style='width: 700px; text-align: center'>"+      
+        "<div style='width: 700px; text-align: center'>"+
         "<div style='float: center;'><img src = '" + test_cue + "' height = '300'></img></div><br>"+
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_1) + "</p></div>" +
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_2) + "</p></div><br>" +
@@ -178,7 +178,7 @@
     var test_2 = {
       type: 'html-button-response',
       stimulus: function(){ return "<p>Which alien lost this object?</p>" +
-        "<div style='width: 700px; text-align: center'>"+      
+        "<div style='width: 700px; text-align: center'>"+
         "<div style='float: center;'><img src = '" + umbrella + "' height = '300'></img></div><br>"+
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_1) + "</p></div>" +
         "<div style='width: 350px; display: inline-block;'><p>" + get_utt(utt_2) + "</p></div><br>" +
@@ -222,7 +222,7 @@
 
     function saveData(name, data) {
       var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'write_data.php'); 
+      xhr.open('POST', 'write_data.php');
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send(JSON.stringify({filename: name, filedata: data}));
      }
